@@ -1,0 +1,533 @@
+<!doctype html>
+
+<html lang="en">
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<head>
+		<meta charset="utf-8">
+
+		<title>Wethington_DataViz Presentation</title>
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="images/globe.ico?"> -->
+		<link rel="icon" type="image/x-icon" href="{{ "images/favicon.ico" | prepend: site.baseurl }}"
+		<meta name="description" content="Portfolio Presentation for AS.470.673.51 - Data Visualization">
+		<meta name="author" content="Travis Wethington">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<script src="js/highcharts/js/highcharts.js"></script>
+		<script src="js/highcharts/js/modules/funnel.js"></script>
+		<script src="js/highcharts/js/themes/dark-unica.js"></script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section><!-- Title -->
+					<h2>Portfolio Presentation</h2>
+					<p>Travis Wethington</p>
+					
+						<small>
+							Data Visualization<br>
+							Johns Hopkins University<br>
+							Spring 2016
+						</small>
+					</p>
+				</section>
+
+				<section><!-- 1. Purpose /  Data sets vertical. -->
+					<section>
+						<h2>World Unrest</h2>
+						<br><br>
+						<p>
+							Simply put, this portfolio addresses world unrest. <br>Datasets addressing terrorism, political violence, world governance, refugee profiles, and arms proliferation have been explored through various data visualizations to generate awareness on respective effects on world unrest.
+						</p>
+						<br><br><br>
+					<small style="font-style: italic;">Arrow down for hyperlinked cites for all data sets.<br>Overviews navigate to section of presentation with brief description of data and visualizations.</small>
+					</section>
+
+					<section>
+						<h3>Global Terrorism Database</h3>
+						<p><a href="#/2"><small>Overview</small></a></p>
+						<small><a href="http://www.start.umd.edu/gtd" target="_blank" style="color: #b2dfdb"><blockquote>National Consortium for the Study of Terrorism and Responses to Terrorism (START). (2015). Global Terrorism Database [Data file].</blockquote></a>
+						</small>
+					</section>
+					<section>
+						<h3>Major Episodes of Political Violence, 1946-2014</h3>
+						<p><a href="#/3"><small>Overview</small></a></p>
+						<small><a href="http://www.systemicpeace.org/inscrdata.html" target="_blank" style="color: #b2dfdb"><blockquote>Center for Systemic Peace, Integrated Network for Societal Conflict Research (INSCR). (2015). Major Episodes of Political Violence and Conflict Regions, 1946-2014 [Data file].</blockquote></a>
+						</small>
+					</section>
+					<section>
+						<h3>Worldwide Governance Indicators</h3>
+						<p><a href="#/4"><small>Overview</small></a></p>
+						<small><a href="http://info.worldbank.org/governance/wgi/index.aspx#home" target="_blank" style="color: #b2dfdb"><blockquote>The World Bank Group. (2015). The Worldwide Governance Indicators (WGI) Project, 1996-2014 [Data file].</blockquote></a>
+						</small>
+					</section>
+					<section>
+						<h3>UNHCR Statistical Database</h3>
+						<p><a href="#/5"><small>Overview</small></a></p>
+						<small><a href="http://data.un.org/Data.aspx?d=UNHCR&f=indID%3AType-Ref#UNHCR" target="_blank" style="color: #b2dfdb"><blockquote>United Nations High Commissioner for Refugees (UNHCR). (2015). UNHCR Population Statistics Database, 1951-2014 [Data file].</blockquote></a>
+						</small>
+					</section>
+					<section>
+						<h3>International Arms Transfers</h3>
+						<p><a href="#/6"><small>Overview</small></a></p>
+						<small><a href="http://www.sipri.org/databases/armstransfers" target="_blank" style="color: #b2dfdb"><blockquote>Stockholm International Peace Research Institute (SIPRI). (2015). SIPRI Arms Transfers Database, 1950-2015 [Data file].</blockquote></a>
+						</small>
+					</section>
+				</section>
+
+				<section id="gtd"><!-- 2. GTD -->
+					<section>
+						<h3>Global Terrorism Database | START</h3>
+						<small style="text-align: left;">
+						The GTD is an open-source database including information on terrorist events around the world from 1970 through 2014.  Unlike many other event databases, the GTD includes systematic data on domestic as well as international terrorist incidents.
+						<blockquote>
+							<ul>
+								<li>Contains information on over 140,000 terrorist attacks</li>
+								<li>Currently the most comprehensive unclassified data base on terrorist events in the world</li>
+								<li>Includes information on more than 58,000 bombings, 15,000 assassinations, and 6,000 kidnappings since 1970</li>
+								<li>Includes information on at least 45 variables for each case, with more recent incidents including information on more than 120 variables</li>
+								<li>Supervised by an advisory panel of 12 terrorism research experts</li>
+								<li>Over 4,000,000 news articles and 25,000 news sources were reviewed to collect incident data from 1998 to 2014 alone</li>
+							</ul>
+						</blockquote>
+						</small>
+					</section>
+					<section>
+						<a href="images/gtd.jpg" target="_blank">
+						<img src="images/gtd.jpg" style="width: 100%; border: none;"></a>
+					</section>
+					<section>
+						<a href="images/attack_stars.jpg" target="_blank">
+						<img src="images/attack_stars.jpg" style="width: 100%; border: none;"></a>
+					</section>
+					<section>
+						<a href="images/gtd_type.gif" target="_blank">
+						<img src="images/gtd_type.gif" style="width: 100%; border: none;"></a>
+					</section>
+					<section>
+						<div id="gtd-ts" style="min-width: 310px; height: 700px; margin: auto"></div>
+					</section>
+				</section>
+
+				<section id="inscr"><!-- 3. INSCR -->
+					<section>
+						<h3>Major Episodes of Political Violence | INSCR</h3>
+						<small style="text-align: left;">
+						The Center for Systemic Peace (CSP) &ldquo;War List&rdquo;, formally recognized as Major Episodes of Political Violence (MEPV) comprises 327 episodes of armed conflict (including 30 ongoing cases) that constitute a comprehensive accounting of major armed conflicts in the world, both  interstate and civil political violence episodes:
+							<blockquote>
+							<ul>
+								<li>Interstate episodes inlcude international violence and warfare.</li>
+								<li>Civil Events include civil violence and warfare and ethnic violence and warfare.</li>
+							</ul>
+							</blockquote>
+						</small>
+					</section>
+					<section>
+						<a href="http://public.tableau.com/profile/travis.wethington#!/vizhome/MEPV/MEPV" target="_blank">
+						<img border="0" alt="MEPV" src="images/mepv.jpg">
+						</a>
+					</section>
+<!-- 					<section>
+						<iframe
+							style="border: none;"
+							src="http://public.tableau.com/profile/travis.wethington#!/vizhome/MEPV/MEPV?:embed=true&:from_wg=true&:showVizHome=no"
+							scrolling="no"
+							width="1171px"
+							height="829px">
+							</iframe>
+					</section> -->
+				</section>
+
+				<section id="wgi"><!-- 4. WGI -->
+					<section>
+						<h3>Worldwide Governance Indicators | World Bank</h3>
+						<small>
+						The WGI measure six broad dimensions of governance broken into three categories:
+							<blockquote style="text-align: left;">
+								<b>I. Process: By which governments selected, monitored, and replaced</b><br>
+								<small>
+								1.  Voice and Accountability (VA) – Ability to vote, freedom of expression, freedom of association, and a free media.<br>
+								2.  Political Stability and Absence of Violence/Terrorism (PV) – Likelihood of political instability and/or politically-motivated violence, including terrorism. </small>
+								<br><br>
+								<b>II. Capacity: To effectively formulate and implement sound policies</b><br>
+								<small>
+								3.  Government Effectiveness (GE) – Quality of public and civil services and degree of independence from political pressures; the quality of policy formulation and implementation and credibility of government's commitment to such policies.<br>
+								4.  Regulatory Quality (RQ) – Ability of government to formulate and implement sound policies and regulations that permit and promote private sector development.</small>
+								<br><br>
+								<b>III. Respect: Of citizens and the state for the governing institutions</b><br>
+								<small>5.  Rule of Law (RL) – Agents confident in/abide by rules of society, particularly quality of contract enforcement, property rights, police, and courts; likelihood of crime and violence.<br>
+								6.  Control of Corruption (CC) – Public power exercised for private gain (petty and grand corruption), as well as "capture" of the state by elites and private interests.</small>
+							</blockquote>
+						</small>
+					</section>
+					<section>
+						<a href="http://public.tableau.com/profile/travis.wethington#!/vizhome/WGI/WGIa" target="_blank">
+						<img border="0" alt="WGI" src="images/wgi.jpg">
+						</a>
+<!-- 						http://public.tableau.com/views/WGI/WGIa?:embed=y&:display_count=yes&:showTabs=y
+						http://public.tableau.com/profile/travis.wethington#!/vizhome/WGI/WGIa -->
+						<!-- <img src="wgi.jpg" style="width:90%;"> -->
+					</section>
+<!-- 					<section><iframe src="http://public.tableau.com/profile/travis.wethington#!/vizhome/WGI/WGIa?:showVizHome=no&:embed=true"
+ width="1102" height="852"></iframe></section> -->
+				</section>
+
+				<section id="unhcr"><!-- 5. UNHCR -->
+					<section>
+						<h3>Populations of Concern | UNHCR</h3>
+						<small style="text-align: left";>
+							The UNHCR Statistical Database includes data about populations of concern from the year 1951 up to 2014 with respect to general composition by location of residence or origin and the following status categories:
+						<blockquote>
+						<small>
+						<b>Refugees</b> - individuals recognised under the 1951 Convention relating to the Status of Refugees; its 1967 Protocol; the 1969 OAU Convention Governing the Specific Aspects of Refugee Problems in Africa; those recognised in accordance with the UNHCR Statute; individuals granted complementary forms of protection; or those enjoying temporary protection.
+						<br><br>
+						<b>Asylum-seekers</b> are individuals who have sought international protection and whose claims for refugee status have not yet been determined, irrespective of when they may have been lodged.
+						<br><br>
+						<b>Internally displaced persons (IDPs)</b> - individuals forced to leave homes or places of habitual residence, in particular as a result of, or in order to avoid the effects of armed conflict, situations of generalised violence, violations of human rights, or natural or man-made disasters, and who have not crossed an international border.
+						<br><br>
+						<b>Returned refugees</b> - returned to their country of origin spontaneously or in an organised fashion but are yet to be fully integrated.
+						<br><br>
+						<b>Returned IDPs</b> - beneficiaries of protection and assistance activities returned to their areas of origin or habitual residence.
+						<br><br>
+						<b>Stateless persons</b> - persons not considered nationals by any State under the operation of its law; but data from some countries may also include persons with undetermined nationality.
+						<br><br>
+						<b>Others of concern</b> - do not necessarily fall directly into any of the groups above, but to whom are extended protection and/or assistance.
+						</small>
+						</blockquote>
+						<br><br>
+						<p>For purposes of the following visualizations, internally displaced persons were not included.  The focus is the implication on the countries of origin and on the affect on receiving countries.</p>
+						</small>
+					</section>
+<!-- 					<section data-background-iframe="js/highcharts/refugee_funnels.html">
+						<a href="js/highcharts/refugee_funnels.html" target="_blank"><h3>Open</h3></a>
+					</section> -->
+					<section> <!--  style="top: auto !important"; -->
+						<div id="origins" style="min-width: 410px; max-width: 800px; height: 350px; margin: 0 auto"></div>
+						<div id="hosts" style="min-width: 410px; max-width: 800px; height: 350px; margin: 0 auto"></div>
+					</section>
+					<section data-background-iframe="js/d3/chord.html">
+						<a href="js/d3/chord.html" target="_blank"><h3>Open</h3><h4>for interactivity</h4></a>
+					</section>
+				</section>
+
+				<section id="sipri"><!-- 6. SIPRI -->
+					<section>
+						<h3>International Arms Transfers | SIPRI</h3>
+						<small style="text-align: left";>
+							The SIPRI Arms Transfers Database contains information on all transfers of major conventional weapons from 1950 to the most recent full calendar year. It is a unique resource for researchers, policy-makers and analysts, the media and civil society interested in monitoring and measuring the international flow of major arms. The primary objective for leveraging this dataset in the portfolio include:
+							<blockquote><ul>
+							<li>Where do countries in conflict get their weapons from?</li>
+							<li>Where are potentially destabilizing build ups of weapons occurring?</li>
+							<li>Who are the suppliers and recipients of major conventional weapons?</li>
+							<li>What weapons have been exported or imported by specific suppliers or recipients?</li>
+							</ul></blockquote>
+						</small>
+						<!-- <br><br><br><br><br><br> -->
+					</section>
+					<section>
+					<small style="font-style: italic;">Visualizations still in progress at this time.</small>	
+					</section>					
+				</section>
+
+				<section>
+					<h2>Credits</h2>
+					<ul>
+						<li>reveal.js</li>
+						<li>highcharts.js</li>
+						<li>Tableau Public</li>
+						<!-- <li>Adobe Illustrator</li> -->
+						<li>GitHub Pages</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Thank you!</h2>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'concave', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+			    Highcharts.gtd-ts.redraw(),
+			    Highcharts.origins.redraw(),
+			    Highcharts.hosts.redraw()
+			} );
+
+		</script>
+
+	<script type="text/javascript">
+	$(function () {
+	      $('#gtd-ts').highcharts({
+	          credits: {
+	              text: 'Sources: Global Terrorism Database (Data) , Highcharts (Javascript) | Travis Wethington',
+	              href: null
+	          },
+
+	          chart: {
+	              zoomType: 'x'
+	          },
+	          title: {
+	              text: 'Terrorism Events by Year, 1970-2014'
+	          },
+	          subtitle: {
+	              text: document.ontouchstart === undefined ?
+	                      'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
+	          },
+	          yAxis: {
+	              min: 0,
+	              title: {
+	                  text: 'Total Events'
+	              }
+	          },
+	          legend: {
+	              enabled: false
+	          },
+	          plotOptions: {
+	              area: {
+	                  fillColor: {
+	                      linearGradient: {
+	                          x1: 0,
+	                          y1: 0,
+	                          x2: 0,
+	                          y2: 1
+	                      },
+	                      stops: [
+	                          [0, Highcharts.getOptions().colors[0]],
+	                          [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+	                      ]
+	                  },
+	                  marker: {
+	                      radius: 2
+	                  },
+	                  lineWidth: 1,
+	                  states: {
+	                      hover: {
+	                          lineWidth: 1
+	                      }
+	                  },
+	                  threshold: null
+	              }
+	          },
+	          series: [{
+	              type: 'area',
+	              name: 'Events',
+	              data: [
+						  [1971,470],
+						  [1972,494],
+						  [1973,473],
+						  [1974,580],
+						  [1975,741],
+						  [1976,923],
+						  [1977,1318],
+						  [1978,1526],
+						  [1979,2661],
+						  [1980,2663],
+						  [1981,2585],
+						  [1982,2546],
+						  [1983,2871],
+						  [1984,3494],
+						  [1985,2917],
+						  [1986,2861],
+						  [1987,3185],
+						  [1988,3721],
+						  [1989,4322],
+						  [1990,3887],
+						  [1991,4683],
+						  [1992,5077],
+						  [1993,4954],
+						  [1994,3459],
+						  [1995,3083],
+						  [1996,3058],
+						  [1997,3204],
+						  [1998,933],
+						  [1999,1396],
+						  [2000,1814],
+						  [2001,1907],
+						  [2002,1332],
+						  [2003,1262],
+						  [2004,1161],
+						  [2005,2014],
+						  [2006,2751],
+						  [2007,3241],
+						  [2008,4788],
+						  [2009,4722],
+						  [2010,4819],
+						  [2011,5065],
+						  [2012,8491],
+						  [2013,11999],
+						  [2014,16818]
+				]
+	          }]
+	      });
+	      // Make monochrome colors and set them as default for all funnels
+	      Highcharts.getOptions().plotOptions.funnel.colors = (function () {
+	        var colors = [],
+	            base = Highcharts.getOptions().colors[10],
+	            i;
+
+	        for (i = 0; i < 10; i += 1) {
+	            // Start out with a darkened base color (negative brighten), and end
+	            // up with a much brighter color
+	            colors.push(Highcharts.Color(base).brighten((i - 8) / 10).get());
+	        }
+	        return colors;
+	      }());
+		    $('#origins').highcharts({
+		        credits: {
+		              text: null,
+		              href: null
+		        },
+		        chart: {
+		            type: 'funnel',
+		            marginRight: 100,
+		            inverted: true
+		        },
+		        title: {
+		            text: 'Top 10 Refugee Origins, Overall 1951-2014',
+		            x: -50
+		        },
+		        subtitle: {
+		            text: 'Countries with Refugees Funneling Out (Millions)',
+		            x: -50
+		        },
+		        plotOptions: {
+		            series: {
+		                dataLabels: {
+		                    enabled: true,
+		                    format: '<b>{point.name}</b> ({point.y:,.1f})',
+		                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+		                    softConnector: true
+		                },
+		                neckWidth: '35%',
+		                neckHeight: '20%'
+
+		                //-- Other available options
+		                // height: pixels or percent
+		                // width: pixels or percent
+		            }
+		        },
+		        legend: {
+		            enabled: false
+		        },
+		        series: [{
+		            name: 'Refugees',
+		            data: [
+						['Afghanistan', 146.7],
+						//['Various/Unknown', 97.5],
+						['Iraq', 50],
+						['Colombia', 47.7],
+						['Dem. Rep. of the Congo', 33.7],
+						['Sudan', 33.6],
+						['Somalia', 29.3],
+						['Syria', 26.9],
+						['Ethiopia', 25.1],
+						['Angola', 20.1],
+						['Bosnia and Herzegovina', 19.8]
+		            ]
+		        }]
+		    });
+
+		    $('#hosts').highcharts({
+		        credits: {
+		              text: 'Sources: UNHCR (Data) , Highcharts (Javascript) | Visualization: Travis Wethington',
+		              href: null
+		        },
+		        chart: {
+		            type: 'funnel',
+		            marginRight: 100
+		        },
+		        title: {
+		            text: 'Top 10 Asylum Hosts for Refugees, Overall 1951-2014',
+		            x: -50
+		        },
+		        subtitle: {
+		            text: 'Countries with Refugees Funneling In (Millions)',
+		            x: -50
+		        },
+		        plotOptions: {
+		            series: {
+		                dataLabels: {
+		                    enabled: true,
+		                    format: '<b>{point.name}</b> ({point.y:,.1f})',
+		                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+		                    softConnector: true
+		                },
+		                neckWidth: '65%',
+		                neckHeight: '80%'
+
+		                //-- Other available options
+		                // height: pixels or percent
+		                // width: pixels or percent
+		            }
+		        },
+		        legend: {
+		            enabled: false
+		        },
+		        series: [{
+		            name: 'Asylum Seekers',
+		            data: [
+						['Somalia', 23.3],
+						['Iraq', 23.7],
+						['Syria', 26.6],
+						['Germany', 31],
+						['United States', 34.1],
+						['Sudan', 37.1],
+						['Colombia', 42.7],
+						['Dem. Rep. of the Congo', 47.4],
+						['Iran', 69.7],
+						['Pakistan', 84]
+		            ]
+		        }]
+		    });
+	  });
+	</script>
+
+	</body>
+</html>
