@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Terrorism Events Over Time</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  </head>
+<body>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="http://code.highcharts.com/themes/dark-unica.js"></script>
+  <script src="https://code.highcharts.com/modules/data.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+  <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+  <pre id="csv" style="display:none">Year,Events
+1970,651
+1971,470
+1972,494
+1973,473
+1974,580
+1975,741
+1976,923
+1977,1318
+1978,1526
+1979,2661
+1980,2663
+1981,2585
+1982,2546
+1983,2871
+1984,3494
+1985,2917
+1986,2861
+1987,3185
+1988,3721
+1989,4322
+1990,3887
+1991,4683
+1992,5077
+1993,4954
+1994,3459
+1995,3083
+1996,3058
+1997,3204
+1998,933
+1999,1396
+2000,1814
+2001,1907
+2002,1332
+2003,1262
+2004,1161
+2005,2014
+2006,2751
+2007,3241
+2008,4788
+2009,4722
+2010,4819
+2011,5065
+2012,8491
+2013,11999
+2014,16818</pre>
+
+<script type="text/javascript">
+$(function () {
+      $('#container').highcharts({
+          credits: {
+              text: 'Sources: Global Terrorism Database (Data) , Highcharts (Javascript) | Travis Wethington',
+              href: null
+          },
+
+          chart: {
+              zoomType: 'x'
+          },
+          data: {
+              csv: document.getElementById('csv').innerHTML
+          },
+          title: {
+              text: 'Terrorism Events by Year, 1970-2014'
+          },
+          subtitle: {
+              text: document.ontouchstart === undefined ?
+                      'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
+          },
+          yAxis: {
+              min: 0,
+              title: {
+                  text: 'Total Events'
+              }
+          },
+          legend: {
+              enabled: false
+          },
+          plotOptions: {
+              area: {
+                  fillColor: {
+                      linearGradient: {
+                          x1: 0,
+                          y1: 0,
+                          x2: 0,
+                          y2: 1
+                      },
+                      stops: [
+                          [0, Highcharts.getOptions().colors[0]],
+                          [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                      ]
+                  },
+                  marker: {
+                      radius: 2
+                  },
+                  lineWidth: 1,
+                  states: {
+                      hover: {
+                          lineWidth: 1
+                      }
+                  },
+                  threshold: null
+              }
+          },
+
+          series: [{
+              type: 'area',
+              name: 'Events'
+          }]
+      });
+  });
+</script>
+</body>
+</html>

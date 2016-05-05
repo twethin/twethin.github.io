@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Cumulative Refugee Movements, 1951-2014</title>
+  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	<script src="js/highcharts.js"></script>
+	<script src="js/modules/funnel.js"></script>
+	<script src="js/modules/exporting.js"></script>
+	<script src="js/themes/dark-unica.js"></script>
+
+	<div id="origins" style="min-width: 410px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+	<div id="hosts" style="min-width: 410px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+  <script type="text/javascript">
+	$(function () {
+    // Load the fonts
+	/*Highcharts.createElement('link', {
+	   href: '//fonts.googleapis.com/css?family=Unica+One',
+	   rel: 'stylesheet',
+	   type: 'text/css'
+	}, null, document.getElementsByTagName('head')[0]);*/
+
+    // Make monochrome colors and set them as default for all funnels
+    Highcharts.getOptions().plotOptions.funnel.colors = (function () {
+        var colors = [],
+            base = Highcharts.getOptions().colors[10],
+            i;
+
+        for (i = 0; i < 10; i += 1) {
+            // Start out with a darkened base color (negative brighten), and end
+            // up with a much brighter color
+            colors.push(Highcharts.Color(base).brighten((i - 8) / 10).get());
+        }
+        return colors;
+    }());
+    
+    $('#origins').highcharts({
+        credits: {
+              text: null,
+              href: null
+        },
+        chart: {
+            type: 'funnel',
+            marginRight: 100,
+            inverted: true
+        },
+        title: {
+            text: 'Top 10 Refugee Origins, Overall 1951-2014',
+            x: -50
+        },
+        subtitle: {
+            text: 'Countries with Refugees Funneling Out (Millions)',
+            x: -50
+        },
+        plotOptions: {
+            series: {
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b> ({point.y:,.1f})',
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+                    softConnector: true
+                },
+                neckWidth: '35%',
+                neckHeight: '20%'
+
+                //-- Other available options
+                // height: pixels or percent
+                // width: pixels or percent
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        series: [{
+            name: 'Refugees',
+            data: [
+				['Afghanistan', 146.7],
+				//['Various/Unknown', 97.5],
+				['Iraq', 50],
+				['Colombia', 47.7],
+				['Dem. Rep. of the Congo', 33.7],
+				['Sudan', 33.6],
+				['Somalia', 29.3],
+				['Syria', 26.9],
+				['Ethiopia', 25.1],
+				['Angola', 20.1],
+				['Bosnia and Herzegovina', 19.8]
+            ]
+        }]
+    });
+
+    $('#hosts').highcharts({
+        credits: {
+              text: 'Sources: UNHCR (Data) , Highcharts (Javascript) | Visualization: Travis Wethington',
+              href: null
+        },
+        chart: {
+            type: 'funnel',
+            marginRight: 100
+        },
+        title: {
+            text: 'Top 10 Asylum Hosts for Refugees, Overall 1951-2014',
+            x: -50
+        },
+        subtitle: {
+            text: 'Countries with Refugees Funneling In (Millions)',
+            x: -50
+        },
+        plotOptions: {
+            series: {
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b> ({point.y:,.1f})',
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+                    softConnector: true
+                },
+                neckWidth: '65%',
+                neckHeight: '80%'
+
+                //-- Other available options
+                // height: pixels or percent
+                // width: pixels or percent
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        series: [{
+            name: 'Asylum Seekers',
+            data: [
+				['Somalia', 23.3],
+				['Iraq', 23.7],
+				['Syria', 26.6],
+				['Germany', 31],
+				['United States', 34.1],
+				['Sudan', 37.1],
+				['Colombia', 42.7],
+				['Dem. Rep. of the Congo', 47.4],
+				['Iran', 69.7],
+				['Pakistan', 84]
+            ]
+        }]
+    });
+});
+  </script>
+</body>
+</html>
