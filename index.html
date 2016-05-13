@@ -1,7 +1,16 @@
 <!doctype html>
-
+<style type="text/css">
+	.galleryItem {
+	color: #797478;
+	font: 10px/1.5 Verdana, Helvetica, sans-serif;
+	float: left;	
+	
+	width: 20%;
+	margin:  3% 3% 50px 3%;	
+	}
+</style>
 <html lang="en">
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+
 	<head>
 		<meta charset="utf-8">
 
@@ -34,6 +43,18 @@
 		<script src="js/highcharts/js/highcharts.js"></script>
 		<script src="js/highcharts/js/modules/funnel.js"></script>
 		<script src="js/highcharts/js/themes/dark-unica.js"></script>
+		<script src="js/htmlwidgets-0.6.js"></script>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<link href="js/leaflet-0.7.3/leaflet.css" rel="stylesheet" />
+		<script src="js/leaflet-0.7.3/leaflet.js"></script>
+		<link href="js/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+		<script src="js/leaflet-binding-1.0.1/leaflet.js"></script>
+
+		<script src="js/d3/d3.min.js"></script>
+		<script src="js/d3-tip/index.js"></script>
+		<link href="js/d3/chorddiag-0.0.0.9000/chorddiag.css" rel="stylesheet" />
+		<script src="js/d3/chorddiag-0.0.0.9000/chorddiag.js"></script>
+		<script src="js/d3/chorddiag-binding-0.0.1/chorddiag.js"></script>
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -44,19 +65,119 @@
 		<div class="reveal">
 			<div class="slides">
 				<section><!-- Title -->
-					<h2>Portfolio Presentation</h2>
-					<p>Travis Wethington</p>
+					<h1>World Unrest</h1>
+					<p style="font-style: italic; font-size: 20px;">Terrorism Events, Societal Conflict, World Governance, Populations of Concern, &amp Arms Transfers.</p><br><br>
+					<h3>Data Visualization Portfolio</h3>
+					<h4>Travis Wethington</h4>
 					
 						<small>
-							Data Visualization<br>
 							Johns Hopkins University<br>
 							Spring 2016
 						</small>
 					</p>
 				</section>
+				<section id="toc"><!-- TOC -->
+					<div class="header">
+				    	<h3>Table of Contents</h3>
+				    	<small style="font-style: italic; font-size: 15px">Click thumbnail to go directly to viz.</small><br>
+				    </div>
+				    
+				    <div class="container">
+				       	<div class="galleryItem">
+				    		<sup style="font-size: 16px;">1</sup> <a href="#/4/1" title="Source: GTD | Tools: R, Leaflet, Illustrator">
+							<img width="150px" height="75px" src="images/1.jpg" style="border: none;"></a>
+					   	</div>
+					    	
+				    	<div class="galleryItem">
+				    		<sup style="font-size: 16px;">2</sup> <a href="#/4/2" title="Source: GTD | Tools: R, Illustrator">
+							<img width="150px" height="75px" src="images/2.jpg" style="border: none;"></a>
+				    	</div>
+					    	
+				    	<div class="galleryItem">
+				    		<sup style="font-size: 16px;">3</sup> <a href="#/4/3" title="Source: GTD | Tools: Tableau, ezgif">
+							<img width="150px" height="75px" src="images/3.gif" style="border: none;"></a>
+				    	</div>
+					    	
+				    	<div class="galleryItem">
+				    		<sup style="font-size: 16px;">4</sup> <a href="#/4/4" title="Source: GTD | Tools: Highcharts">
+							<img width="150px" height="75px" src="images/4.jpg" style="border: none;"></a>
+				    	</div>
+				    	
+				    	<div class="galleryItem">
+				    		<sup style="font-size: 16px;">5</sup> <a href="#/inscr/1" title="Source: INSCR | Tools: Tableau">
+							<img width="150px" height="75px" src="images/5.jpg" style="border: none;"></a>
+				    	</div>
+				    	
+				    	<div class="galleryItem">
+				    		<sup style="font-size: 16px;">6</sup> <a href="#/inscr/1" title="Source: INSCR | Tools: Tableau">
+							<img width="150px" height="75px" src="images/6.jpg" style="border: none;"></a>
+				    	</div>
+				    	
+				    	<div class="galleryItem">
+				    		<sup style="font-size: 16px;">7</sup> <a href="#/inscr/2" title="Source: INSCR | Tools: ">
+							<img width="150px" height="75px" src="images/7.jpg" style="border: none;"></a>
+				    	</div>
+				    	
+				    	<div class="galleryItem">
+				    		<sup style="font-size: 16px;">8</sup> <a href="#/4/3" title="Source: INSCR | Tools: Tableau">
+							<img width="150px" height="75px" src="images/8.jpg" style="border: none;"></a>
+				    	</div>
+				    	
+				    	<div class="galleryItem">
+				    		<sup style="font-size: 16px;">9</sup> <a href="#/4/2" title="Source: WGI | Tools: Tableau">
+							<img width="150px" height="75px" src="images/9.jpg" style="border: none;"></a>
+				    	</div>
+				    	
+				    	<div class="galleryItem">
+				    		<sup style="font-size: 16px;">10</sup> <a href="#/4/2" title="Source: UNHCR | Tools: Tableau">
+							<img width="150px" height="75px" src="images/10.jpg" style="border: none;"></a>
+				    	</div>
+
+				       	<div class="galleryItem">
+				    		<sup style="font-size: 16px;">11</sup> <a href="#/4/1" title="Source: UNHCR | Tools: Tableau">
+							<img width="150px" height="75px" src="images/11.jpg" style="border: none;"></a>
+					   	</div>
+					    	
+				    	<div class="galleryItem">
+				    		<sup style="font-size: 16px;">12</sup> <a href="#/4/2" title="Source: UNHCR | Tools: Highcharts, Custom HTML">
+							<img width="150px" height="75px" src="images/12.jpg" style="border: none;"></a>
+				    	</div>
+					    	
+				    	<div class="galleryItem">
+				    		<sup style="font-size: 16px;">13</sup> <a href="#/4/2" title="Source: UNHCR | Tools: R, D3, Custom HTML">
+							<img width="150px" height="75px" src="images/13.jpg" style="border: none;"></a>
+				    	</div>
+					    	
+				    	<div class="galleryItem">
+				    		<sup style="font-size: 16px;">14</sup> <a href="#/4/2" title="Source: SIPRI  | Tools:">
+							<img width="150px" height="75px" src="images/14.jpg" style="border: none;"></a>
+				    	</div>
+				    	
+				    	<div class="galleryItem">
+				    		<sup style="font-size: 16px;">15</sup> <a href="#/4/2" title="Source: SIPRI | Tools: RAW, Custom HTML">
+							<img width="150px" height="75px" src="images/15.jpg" style="border: none;"></a>
+				    	</div>
+			    	</div><br><br>
+			    	<p><h4><a href="#/cites">Cites</a> | <a href="#/credits">Credits</a></h4></p>
+				</section>
+
+				<section id="cites"><!-- Cites -->
+					<h3>Cites</h3>
+						<p style="font-size: 20px; text-align: left;">
+							<a href="http://www.start.umd.edu/gtd" target="_blank" title="Go to source." style="color: #b2dfdb">National Consortium for the Study of Terrorism and Responses to Terrorism (START). (2015).</a> Global Terrorism Database [Data file].<sup style="font-size: 12px;">1,2,3,4</sup></p>
+						<p style="font-size: 20px; text-align: left;">	
+							<a href="http://www.systemicpeace.org/inscrdata.html" target="_blank" title="Go to source." style="color: #b2dfdb">Center for Systemic Peace, Integrated Network for Societal Conflict Research (INSCR). (2015).</a>  Major Episodes of Political Violence and Conflict Regions, 1946-2014 [Data file] <sup style="font-size: 12px;">5,6</sup>;  Coups d'Etat, 1946-2014 [Data file] </ul><sup style="font-size: 12px;">7</sup>;  State Fragility Index, 1995-2014 [Data file]. <sup style="font-size: 12px;">8</sup></p>
+						<p style="font-size: 20px; text-align: left;">	
+							<a href="http://info.worldbank.org/governance/wgi/index.aspx#home" target="_blank" title="Go to source." style="color: #b2dfdb">The World Bank Group. (2015).</a> The Worldwide Governance Indicators (WGI) Project, 1996-2014 [Data file]. <sup style="font-size: 12px;">9</sup><br><br></p>
+						<p style="font-size: 20px; text-align: left;">	
+							<a href="http://data.un.org/Data.aspx?d=UNHCR&f=indID%3AType-Ref#UNHCR" target="_blank" title="Go to source." style="color: #b2dfdb">United Nations High Commissioner for Refugees (UNHCR). (2015).</a> UNHCR Population Statistics Database, 1951-2014 [Data file]. <sup style="font-size: 12px;">10,11,12,13</sup></p>
+						<p style="font-size: 20px; text-align: left;">	
+							<a href="http://www.sipri.org/databases/armstransfers" target="_blank" title="Go to source." style="color: #b2dfdb">Stockholm International Peace Research Institute (SIPRI). (2015).</a> SIPRI Arms Transfers Database, 1950-2015 [Data file]. <sup style="font-size: 12px;">14,15</sup>
+						</p>
+				</section>
 
 				<section><!-- 1. Purpose /  Data sets vertical. -->
-					<section>
+					<section id="Overview">
 						<h2>World Unrest</h2>
 						<br><br>
 						<p>
@@ -66,19 +187,22 @@
 					<small style="font-style: italic;">Arrow down for hyperlinked cites for all data sets.<br>Overviews navigate to section of presentation with brief description of data and visualizations.</small>
 					</section>
 
-					<section>
+					<section><!-- Data Sets -->
 						<h3>Global Terrorism Database</h3>
 						<p><a href="#/2"><small>Overview</small></a></p>
 						<small><a href="http://www.start.umd.edu/gtd" target="_blank" style="color: #b2dfdb"><blockquote>National Consortium for the Study of Terrorism and Responses to Terrorism (START). (2015). Global Terrorism Database [Data file].</blockquote></a>
 						</small>
 					</section>
 					<section>
-						<h3>Major Episodes of Political Violence, 1946-2014</h3>
+						<h3>Integrated Network for Societal Conflict Research</h3>
 						<p><a href="#/3"><small>Overview</small></a></p>
-						<small><a href="http://www.systemicpeace.org/inscrdata.html" target="_blank" style="color: #b2dfdb"><blockquote>Center for Systemic Peace, Integrated Network for Societal Conflict Research (INSCR). (2015). Major Episodes of Political Violence and Conflict Regions, 1946-2014 [Data file].</blockquote></a>
+						<small style="text-align: left;"><a href="http://www.systemicpeace.org/inscrdata.html" target="_blank" style="color: #b2dfdb"><blockquote>Center for Systemic Peace, Integrated Network for Societal Conflict Research (INSCR). (2015). <br>
+						<ul>Major Episodes of Political Violence and Conflict Regions, 1946-2014 [Data file];</ul>
+						<ul>Coups d'Etat, 1946-2014 [Data file];</ul>
+						<ul>State Fragility Index, 1995-2014 [Data file].</ul></blockquote></a>
 						</small>
 						<br><br><br>
-						<small style="font-style: italic; font-size: 28px;">Other datasets include Forcibly Displaced Persons, State Failure Problem Set, Regime Authority Characteristics and Transitions, Coups d'Etat, and State Fragility.</small>
+						<small style="font-style: italic; font-size: 18px;">Other datasets include Forcibly Displaced Persons, State Failure Problem Set, <br>Regime Authority Characteristics and Transitions, and State Fragility.</small>
 					</section>
 					<section>
 						<h3>Worldwide Governance Indicators</h3>
@@ -116,51 +240,66 @@
 							</ul>
 						</blockquote>
 						</small>
+						<br><br>
+						<small style="font-style: italic; margin-bottom: 10px;">Charts 1-4 below.</small>
 					</section>
-					<section>
-						<a href="images/gtd.jpg" target="_blank">
-						<img src="images/gtd.jpg" style="width: 100%; border: none;"></a>
+					<section id="all" data-background ="gtd.jpg">
+						<a href="gtd.html" target="_blank" title="Click to open for interactivity."><h3>Open</h3><h4>for interactivity</h4></a>
+						<!-- <img src="images/gtd.jpg" style="width: 100%; border: none;"></a> -->
 					</section>
-					<section>
-						<a href="images/attack_stars.jpg" target="_blank">
-						<img src="images/attack_stars.jpg" style="width: 100%; border: none;"></a>
+					<section id="stars">
+						<a href="images/stars.jpg" target="_blank">
+						<img src="images/stars.jpg" style="width: 100%; border: none;"></a>
 					</section>
-					<section>
+					<section id="gif">
 						<a href="images/gtd_type.gif" target="_blank">
 						<img src="images/gtd_type.gif" style="width: 100%; border: none;"></a>
 					</section>
-					<section>
+					<section id="hcts">
 						<div id="gtd-ts" style="min-width: 310px; height: 700px; margin: auto"></div>
 					</section>
 				</section>
 
 				<section id="inscr"><!-- 3. INSCR -->
 					<section>
-						<h3>Major Episodes of Political Violence | INSCR</h3>
+						<h3>Integrated Network for Societal Conflict Research | CSP</h3>
 						<small style="text-align: left;">
-						The Center for Systemic Peace (CSP) &ldquo;War List&rdquo;, formally recognized as Major Episodes of Political Violence (MEPV) comprises 327 episodes of armed conflict (including 30 ongoing cases) that constitute a comprehensive accounting of major armed conflicts in the world, both  interstate and civil political violence episodes:
 							<blockquote>
-							<ul>
-								<li>Interstate episodes inlcude international violence and warfare.</li>
-								<li>Civil Events include civil violence and warfare and ethnic violence and warfare.</li>
-							</ul>
+								<b>Major Episodes of Political Violence</b><br>
+								<small>
+								The Center for Systemic Peace (CSP) &ldquo;War List&rdquo;, formally recognized as Major Episodes of Political Violence (MEPV) comprises 327 episodes of armed conflict (including 30 ongoing cases) that constitute a comprehensive accounting of major armed conflicts in the world, both interstate and civil political violence episodes:
+								<ul>
+									<li>Episodes inclue Interstate episodes inlcude international violence and warfare.</li>
+									<li>Civil Events include civil violence and warfare and ethnic violence and warfare.</li>
+								</ul>
+								</small>
+								<br><br>
+								<b>Coups d'Etat</b><br>
+								<small>
+								For purposes of this compilation, a coup d’état is defined as a forceful seizure of executive authority and office by a dissident/opposition faction within the country’s ruling or political elites that results in a substantial change in the executive leadership and the policies of the prior regime (although not necessarily in the nature of regime authority or mode of governance). Social revolutions, victories by oppositional forces in civil wars, and popular uprisings, while they may lead to substantial changes in central authority, are not considered coups d’état.
+								The dataset includes four types of coup events: successful coups, attempted (failed) coups, coup plots, and alleged coup plots.  Additionally, leadership changes not directly resulting from a coup are also available and include: autocratic change, ousters by Foreign and Rebel Forces, assassinations, and resignations.
+								</small>
+								<br><br>
+								<b>State Fragility Index</b><br>
+								<small>The Fragility Index combines metrics of both Effectiveness and Legitimacy in four performance dimensions: Security, Political, Economic, and Social.</small>
 							</blockquote>
 						</small>
+					<br><br>
+					<small style="font-style: italic; margin-bottom: 10px;">Charts 5-6 below.</small>
 					</section>
-					<section>
+					<section id="">
 						<a href="http://public.tableau.com/profile/travis.wethington#!/vizhome/MEPV/MEPV" target="_blank">
-						<img border="0" alt="MEPV" src="images/mepv.jpg">
+						<img border="0" alt="MEPV" title="Click to open in Tableau Public." src="images/mepv.jpg">
 						</a>
 					</section>
-<!-- 					<section>
-						<iframe
-							style="border: none;"
-							src="http://public.tableau.com/profile/travis.wethington#!/vizhome/MEPV/MEPV?:embed=true&:from_wg=true&:showVizHome=no"
-							scrolling="no"
-							width="1171px"
-							height="829px">
-							</iframe>
-					</section> -->
+					<section>
+						Coups - Parallel
+					</section>
+					<section>
+						<a href="http://public.tableau.com/profile/travis.wethington#!/vizhome/SFI_0/SFI" target="_blank">
+						<img border="0" alt="SFI" title="Click to open in Tableau Public." src="images/sfi.jpg">
+						</a>
+					</section>
 				</section>
 
 				<section id="wgi"><!-- 4. WGI -->
@@ -184,17 +323,14 @@
 								6.  Control of Corruption (CC) – Public power exercised for private gain (petty and grand corruption), as well as "capture" of the state by elites and private interests.</small>
 							</blockquote>
 						</small>
+					<br><br>
+					<small style="font-style: italic; margin-bottom: none;">Chart 7 below.</small>
 					</section>
-					<section>
+					<section id="sparks">
 						<a href="http://public.tableau.com/profile/travis.wethington#!/vizhome/WGI/WGIa" target="_blank">
-						<img border="0" alt="WGI" src="images/wgi.jpg">
+						<img border="0" alt="WGI" title="Click to open in Tableau Public." src="images/wgi.jpg">
 						</a>
-<!-- 						http://public.tableau.com/views/WGI/WGIa?:embed=y&:display_count=yes&:showTabs=y
-						http://public.tableau.com/profile/travis.wethington#!/vizhome/WGI/WGIa -->
-						<!-- <img src="wgi.jpg" style="width:90%;"> -->
 					</section>
-<!-- 					<section><iframe src="http://public.tableau.com/profile/travis.wethington#!/vizhome/WGI/WGIa?:showVizHome=no&:embed=true"
- width="1102" height="852"></iframe></section> -->
 				</section>
 
 				<section id="unhcr"><!-- 5. UNHCR -->
@@ -208,7 +344,7 @@
 						<br><br>
 						<b>Asylum-seekers</b> are individuals who have sought international protection and whose claims for refugee status have not yet been determined, irrespective of when they may have been lodged.
 						<br><br>
-						<b>Internally displaced persons (IDPs)</b> - individuals forced to leave homes or places of habitual residence, in particular as a result of, or in order to avoid the effects of armed conflict, situations of generalised violence, violations of human rights, or natural or man-made disasters, and who have not crossed an international border.
+						<b>Internally displaced persons (IDPs)</b> - individuals forced to leave homes or places of habitual residence, in particular as a result of, or in order to avoid the effects of armed conflict, situations of generalised violence, violations of human rights, or natural or man-made disasters, and who have not crossed an international border.*
 						<br><br>
 						<b>Returned refugees</b> - returned to their country of origin spontaneously or in an organised fashion but are yet to be fully integrated.
 						<br><br>
@@ -219,19 +355,27 @@
 						<b>Others of concern</b> - do not necessarily fall directly into any of the groups above, but to whom are extended protection and/or assistance.
 						</small>
 						</blockquote>
-						<br><br>
-						<p>For purposes of the following visualizations, internally displaced persons were not included.  The focus is the implication on the countries of origin and on the affect on receiving countries.</p>
-						</small>
+						<p style="font-style: italic; font-size: 10px; text-align: center">*For purposes of the following visualizations, internally displaced persons were not included.  The focus is the implication on the countries of origin and the affect on receiving countries.</p></small>
+					<br>
+					<small style="font-style: italic; margin-bottom: none;">Charts 10-12 below.</small>
 					</section>
-<!-- 					<section data-background-iframe="js/highcharts/refugee_funnels.html">
-						<a href="js/highcharts/refugee_funnels.html" target="_blank"><h3>Open</h3></a>
-					</section> -->
-					<section> <!--  style="top: auto !important"; -->
+					<section id="stack">
+						<a href="https://public.tableau.com/profile/travis.wethington#!/vizhome/UNHCR_0/Stacked" target="_blank"><img border="0" alt="UNHCR" title="Click to open in Tableau Public." src="images/9a.jpg"></a>
+					</section>
+					<section id="tree">
+						<a href="https://public.tableau.com/profile/travis.wethington#!/vizhome/UNHCR_0/Tree" target="_blank"><img border="0" alt="UNHCR" title="Click to open in Tableau Public." src="images/9b.jpg"></a>
+					</section>
+					<section id="hcfun"> <!--  style="top: auto !important"; -->
 						<div id="origins" style="min-width: 410px; max-width: 800px; height: 350px; margin: 0 auto"></div>
-						<div id="hosts" style="min-width: 410px; max-width: 800px; height: 350px; margin: 0 auto"></div>
+						<!-- <div id="hosts" style="min-width: 410px; max-width: 800px; height: 350px; margin: 0 auto"></div> -->
 					</section>
-					<section data-background-iframe="js/d3/chord.html">
+					<section id="chord" data-background-iframe="chord.html">
 						<a href="js/d3/chord.html" target="_blank"><h3>Open</h3><h4>for interactivity</h4></a>
+					</section>
+					<section>
+						<div id="htmlwidget_container">
+						  	<div id="chord" style="width:960px;height:500px;" class="chorddiag html-widget"></div>
+							</div>
 					</section>
 				</section>
 
@@ -247,27 +391,60 @@
 							<li>What weapons have been exported or imported by specific suppliers or recipients?</li>
 							</ul></blockquote>
 						</small>
-						<!-- <br><br><br><br><br><br> -->
+					<br><br>
+					<small style="font-style: italic; margin-bottom: 10px;">Charts 13-14 below.</small>
 					</section>
 					<section>
-					<small style="font-style: italic;">Visualizations still in progress at this time.</small>	
-					</section>					
+					<small style="font-style: italic;">Chart X</small>	
+					</section>
+					<section id="type"><!-- Chart 15 -->
+						<p>Arms Transfers Trending by Type, 1950-2015</p>
+						<svg width="847" height="500" xmlns="http://www.w3.org/2000/svg">
+							<g title="Air defence systems" transform="translate(0,0)"><path class="area" d="M0,32.5L13.03076923076923,32.5L26.06153846153846,32.29252165982672L39.09230769230769,32.29252165982672L52.12307692307692,32.2233622131023L65.15384615384616,31.526827785377716L78.18461538461538,30.731494148046817L91.21538461538462,30.128818969448243L104.24615384615385,29.511323909408723L117.27692307692308,26.078051375588995L130.30769230769232,24.97644018847849L143.33846153846156,26.305289557683537L156.36923076923077,25.806353549171607L169.4,26.260829913360695L182.43076923076924,22.076683386532906L195.46153846153848,21.770405836753305L208.4923076923077,23.21781425748594L221.52307692307693,25.668034655722757L234.55384615384617,25.860693114455085L247.5846153846154,22.21994224046208L260.61538461538464,22.091503267973856L273.6461538461539,17.778917768657852L286.6769230769231,18.737270101839187L299.7076923076923,15.748594011247913L312.73846153846154,18.648350813193495L325.7692307692308,15.921492628058978L338.8,10.097279221766225L351.83076923076925,0.7409940720474246L364.8615384615385,7.105427357601002e-15L377.8923076923077,8.526371789025692L390.92307692307696,12.167122663018699L403.9538461538462,15.817753457972337L416.9846153846154,16.094391244870042L430.0153846153846,18.60389116887065L443.04615384615386,20.787353701170392L456.07692307692315,17.24046207630339L469.10769230769233,22.17054263565892L482.1384615384615,16.094391244870042L495.1692307692308,16.450068399452807L508.2000000000001,18.109895120839035L521.2307692307693,25.386456908344734L534.2615384615384,25.26295789633683L547.2923076923078,29.5953032375741L560.323076923077,27.713178294573645L573.3538461538462,28.775269797841617L586.3846153846154,29.461924304605564L599.4153846153846,28.770329837361302L612.446153846154,28.67153062775498L625.4769230769231,28.217054263565892L638.5076923076923,27.34762121903025L651.5384615384615,27.876196990424077L664.5692307692309,29.032147742818058L677.6,28.91358869129047L690.6307692307693,29.526143790849673L703.6615384615385,29.545903632770937L716.6923076923077,27.802097583219336L729.723076923077,27.520519835841313L742.7538461538461,27.87125702994376L755.7846153846154,25.84093327253382L768.8153846153847,26.49794801641587L781.8461538461539,27.135202918376653L794.876923076923,26.349749202006386L807.9076923076924,26.374449004407964L820.9384615384616,24.279905760753913L833.9692307692308,26.300349597203223L847,23.869889040887674L847,32.5L833.9692307692308,32.5L820.9384615384616,32.5L807.9076923076924,32.5L794.876923076923,32.5L781.8461538461539,32.5L768.8153846153847,32.5L755.7846153846154,32.5L742.7538461538461,32.5L729.723076923077,32.5L716.6923076923077,32.5L703.6615384615385,32.5L690.6307692307693,32.5L677.6,32.5L664.5692307692309,32.5L651.5384615384615,32.5L638.5076923076923,32.5L625.4769230769231,32.5L612.446153846154,32.5L599.4153846153846,32.5L586.3846153846154,32.5L573.3538461538462,32.5L560.323076923077,32.5L547.2923076923078,32.5L534.2615384615384,32.5L521.2307692307693,32.5L508.2000000000001,32.5L495.1692307692308,32.5L482.1384615384615,32.5L469.10769230769233,32.5L456.07692307692315,32.5L443.04615384615386,32.5L430.0153846153846,32.5L416.9846153846154,32.5L403.9538461538462,32.5L390.92307692307696,32.5L377.8923076923077,32.5L364.8615384615385,32.5L351.83076923076925,32.5L338.8,32.5L325.7692307692308,32.5L312.73846153846154,32.5L299.7076923076923,32.5L286.6769230769231,32.5L273.6461538461539,32.5L260.61538461538464,32.5L247.5846153846154,32.5L234.55384615384617,32.5L221.52307692307693,32.5L208.4923076923077,32.5L195.46153846153848,32.5L182.43076923076924,32.5L169.4,32.5L156.36923076923077,32.5L143.33846153846156,32.5L130.30769230769232,32.5L117.27692307692308,32.5L104.24615384615385,32.5L91.21538461538462,32.5L78.18461538461538,32.5L65.15384615384616,32.5L52.12307692307692,32.5L39.09230769230769,32.5L26.06153846153846,32.5L13.03076923076923,32.5L0,32.5Z" style="fill: #7AFEF7;"></path><text x="841" y="26.5" style="font-size: 16px; fill: #C0C0C0; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-family: Arial, Helvetica; text-anchor: end;">Air defence systems</text>
+							</g>
+							<g title="Aircraft" transform="translate(0,42.5)"><path class="area" d="M0,23.96037251734296L13.03076923076923,21.312007032215146L26.06153846153846,14.497291646868764L39.09230769230769,8.23695714149957L52.12307692307692,11.112325382495484L65.15384615384616,13.740615793975103L78.18461538461538,10.886866863061861L91.21538461538462,11.098427254585193L104.24615384615385,7.665589660743134L117.27692307692308,16.586643542715954L130.30769230769232,21.44789983844911L143.33846153846156,21.211631663974153L156.36923076923077,19.611802717856122L169.4,14.895704646963793L182.43076923076924,9.71170293642497L195.46153846153848,12.309108619215053L208.4923076923077,14.029388007222273L221.52307692307693,13.868787418036682L234.55384615384617,13.257269789983841L247.5846153846154,10.337118692388099L260.61538461538464,13.235650479901167L273.6461538461539,5.29981944312458L286.6769230769231,5.824859830846716L299.7076923076923,6.737503563622539L312.73846153846154,5.27665589660743L325.7692307692308,2.0723652950679465L338.8,6.155326427824765L351.83076923076925,6.217095885203836L364.8615384615385,4.0829611327568145L377.8923076923077,5.557706927682219L390.92307692307696,2.012140074123348L403.9538461538462,0.42157654661217947L416.9846153846154,0L430.0153846153846,1.128836833602584L443.04615384615386,4.39180841965219L456.07692307692315,5.248859640786847L469.10769230769233,4.510714625106907L482.1384615384615,4.632709303430577L495.1692307692308,8.303359308182078L508.2000000000001,4.986339446925779L521.2307692307693,8.72339161835978L534.2615384615384,12.738406347999618L547.2923076923078,14.03710918939466L560.323076923077,16.242278817827618L573.3538461538462,21.083460039912573L586.3846153846154,18.160220469447875L599.4153846153846,19.04970065570655L612.446153846154,10.645965979283474L625.4769230769231,10.116292882257909L638.5076923076923,15.16285755012829L651.5384615384615,19.854247838068993L664.5692307692309,18.16794165162026L677.6,19.982419462130572L690.6307692307693,18.52774874085337L703.6615384615385,16.3364772403307L716.6923076923077,19.9469020241376L729.723076923077,17.942483132186638L742.7538461538461,14.568326522854697L755.7846153846154,17.403544616554214L768.8153846153847,17.267651810320253L781.8461538461539,13.978428204884537L794.876923076923,8.795970730780194L807.9076923076924,14.273377363869617L820.9384615384616,16.17587665114511L833.9692307692308,13.874964363774588L847,11.570963603535112L847,32.5L833.9692307692308,32.5L820.9384615384616,32.5L807.9076923076924,32.5L794.876923076923,32.5L781.8461538461539,32.5L768.8153846153847,32.5L755.7846153846154,32.5L742.7538461538461,32.5L729.723076923077,32.5L716.6923076923077,32.5L703.6615384615385,32.5L690.6307692307693,32.5L677.6,32.5L664.5692307692309,32.5L651.5384615384615,32.5L638.5076923076923,32.5L625.4769230769231,32.5L612.446153846154,32.5L599.4153846153846,32.5L586.3846153846154,32.5L573.3538461538462,32.5L560.323076923077,32.5L547.2923076923078,32.5L534.2615384615384,32.5L521.2307692307693,32.5L508.2000000000001,32.5L495.1692307692308,32.5L482.1384615384615,32.5L469.10769230769233,32.5L456.07692307692315,32.5L443.04615384615386,32.5L430.0153846153846,32.5L416.9846153846154,32.5L403.9538461538462,32.5L390.92307692307696,32.5L377.8923076923077,32.5L364.8615384615385,32.5L351.83076923076925,32.5L338.8,32.5L325.7692307692308,32.5L312.73846153846154,32.5L299.7076923076923,32.5L286.6769230769231,32.5L273.6461538461539,32.5L260.61538461538464,32.5L247.5846153846154,32.5L234.55384615384617,32.5L221.52307692307693,32.5L208.4923076923077,32.5L195.46153846153848,32.5L182.43076923076924,32.5L169.4,32.5L156.36923076923077,32.5L143.33846153846156,32.5L130.30769230769232,32.5L117.27692307692308,32.5L104.24615384615385,32.5L91.21538461538462,32.5L78.18461538461538,32.5L65.15384615384616,32.5L52.12307692307692,32.5L39.09230769230769,32.5L26.06153846153846,32.5L13.03076923076923,32.5L0,32.5Z" style="fill: #7AFEF7;"></path><text x="841" y="26.5" style="font-size: 16px; fill: #C0C0C0; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-family: Arial, Helvetica; text-anchor: end;">Aircraft</text>
+							</g>
+							<g title="Armoured vehicles" transform="translate(0,85)"><path class="area" d="M0,28.20993468977644L13.03076923076923,27.136397889977395L26.06153846153846,23.47086159256468L39.09230769230769,21.613602110022608L52.12307692307692,20.11146696809847L65.15384615384616,22.736121577493094L78.18461538461538,16.809218789248934L91.21538461538462,20.17677719166039L104.24615384615385,18.40931926651595L117.27692307692308,19.527756845013815L130.30769230769232,19.18487817131374L143.33846153846156,20.205350414468725L156.36923076923077,20.682931424265263L169.4,21.638093443858327L182.43076923076924,19.23386083898518L195.46153846153848,16.817382567194173L208.4923076923077,18.71137905048983L221.52307692307693,16.98065812609897L234.55384615384617,16.28673700075358L247.5846153846154,13.870258728962572L260.61538461538464,11.343569454910828L273.6461538461539,9.380180859080635L286.6769230769231,8.11479527756845L299.7076923076923,8.08622205476011L312.73846153846154,5.26155488570711L325.7692307692308,12.012999246420499L338.8,15.058088419994977L351.83076923076925,5.020723436322534L364.8615384615385,7.105427357601002e-15L377.8923076923077,6.433057020849034L390.92307692307696,11.943607133885958L403.9538461538462,6.677970359206231L416.9846153846154,3.69002763124843L430.0153846153846,4.253328309469982L443.04615384615386,2.9267143933685027L456.07692307692315,8.33113539311731L469.10769230769233,7.694360713388598L482.1384615384615,9.943481537302187L495.1692307692308,13.331449384576743L508.2000000000001,17.968475257472996L521.2307692307693,18.686887716654105L534.2615384615384,17.478648580758605L547.2923076923078,19.062421502135145L560.323076923077,10.947626224566694L573.3538461538462,16.32755589047978L586.3846153846154,17.576613916101483L599.4153846153846,17.13985179603115L612.446153846154,18.025621703089676L625.4769230769231,21.348279326802313L638.5076923076923,20.4870007535795L651.5384615384615,24.274993720170812L664.5692307692309,25.00156995729716L677.6,24.711755840241146L690.6307692307693,23.952524491333836L703.6615384615385,24.732165285104244L716.6923076923077,24.475006279829188L729.723076923077,20.156367746797287L742.7538461538461,17.82152725445868L755.7846153846154,19.482856066314994L768.8153846153847,18.54810349158503L781.8461538461539,16.592878673700078L794.876923076923,17.568450138156244L807.9076923076924,16.35612911328812L820.9384615384616,20.548229088168803L833.9692307692308,20.69925898015574L847,23.140228585782467L847,32.5L833.9692307692308,32.5L820.9384615384616,32.5L807.9076923076924,32.5L794.876923076923,32.5L781.8461538461539,32.5L768.8153846153847,32.5L755.7846153846154,32.5L742.7538461538461,32.5L729.723076923077,32.5L716.6923076923077,32.5L703.6615384615385,32.5L690.6307692307693,32.5L677.6,32.5L664.5692307692309,32.5L651.5384615384615,32.5L638.5076923076923,32.5L625.4769230769231,32.5L612.446153846154,32.5L599.4153846153846,32.5L586.3846153846154,32.5L573.3538461538462,32.5L560.323076923077,32.5L547.2923076923078,32.5L534.2615384615384,32.5L521.2307692307693,32.5L508.2000000000001,32.5L495.1692307692308,32.5L482.1384615384615,32.5L469.10769230769233,32.5L456.07692307692315,32.5L443.04615384615386,32.5L430.0153846153846,32.5L416.9846153846154,32.5L403.9538461538462,32.5L390.92307692307696,32.5L377.8923076923077,32.5L364.8615384615385,32.5L351.83076923076925,32.5L338.8,32.5L325.7692307692308,32.5L312.73846153846154,32.5L299.7076923076923,32.5L286.6769230769231,32.5L273.6461538461539,32.5L260.61538461538464,32.5L247.5846153846154,32.5L234.55384615384617,32.5L221.52307692307693,32.5L208.4923076923077,32.5L195.46153846153848,32.5L182.43076923076924,32.5L169.4,32.5L156.36923076923077,32.5L143.33846153846156,32.5L130.30769230769232,32.5L117.27692307692308,32.5L104.24615384615385,32.5L91.21538461538462,32.5L78.18461538461538,32.5L65.15384615384616,32.5L52.12307692307692,32.5L39.09230769230769,32.5L26.06153846153846,32.5L13.03076923076923,32.5L0,32.5Z" style="fill: #7AFEF7;"></path><text x="841" y="26.5" style="font-size: 16px; fill: #C0C0C0; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; text-outline: 2px 2px #ff0000; font-family: Arial, Helvetica; text-anchor: end;">Armoured vehicles</text>
+							</g>
+							<g title="Artillery" transform="translate(0,127.5)"><path class="area" d="M0,25.954198473282442L13.03076923076923,21.908396946564885L26.06153846153846,20.591603053435115L39.09230769230769,18.87404580152672L52.12307692307692,21.641221374045802L65.15384615384616,17.270992366412216L78.18461538461538,13.721374045801525L91.21538461538462,17.30916030534351L104.24615384615385,18.14885496183206L117.27692307692308,19.980916030534353L130.30769230769232,21.698473282442748L143.33846153846156,18.225190839694655L156.36923076923077,20.267175572519086L169.4,20.858778625954198L182.43076923076924,20.8206106870229L195.46153846153848,19.484732824427482L208.4923076923077,9.465648854961831L221.52307692307693,14.083969465648856L234.55384615384617,9.255725190839694L247.5846153846154,14.561068702290076L260.61538461538464,14.828244274809158L273.6461538461539,13.358778625954201L286.6769230769231,15.591603053435115L299.7076923076923,14.980916030534349L312.73846153846154,16.641221374045802L325.7692307692308,14.236641221374047L338.8,16.393129770992367L351.83076923076925,18.129770992366414L364.8615384615385,21.030534351145036L377.8923076923077,23.072519083969468L390.92307692307696,18.473282442748094L403.9538461538462,12.423664122137406L416.9846153846154,7.328244274809162L430.0153846153846,2.7671755725190827L443.04615384615386,4.389312977099237L456.07692307692315,0L469.10769230769233,12.99618320610687L482.1384615384615,10.286259541984734L495.1692307692308,9.599236641221374L508.2000000000001,15.133587786259543L521.2307692307693,21.62213740458015L534.2615384615384,15.744274809160306L547.2923076923078,17.385496183206108L560.323076923077,25.34351145038168L573.3538461538462,20.32442748091603L586.3846153846154,23.358778625954198L599.4153846153846,21.87022900763359L612.446153846154,20.83969465648855L625.4769230769231,24.408396946564885L638.5076923076923,25.801526717557252L651.5384615384615,26.14503816793893L664.5692307692309,29.904580152671755L677.6,28.62595419847328L690.6307692307693,28.81679389312977L703.6615384615385,24.06488549618321L716.6923076923077,23.473282442748094L729.723076923077,22.862595419847327L742.7538461538461,21.278625954198475L755.7846153846154,20.572519083969468L768.8153846153847,20.629770992366414L781.8461538461539,17.767175572519086L794.876923076923,18.759541984732827L807.9076923076924,20.49618320610687L820.9384615384616,25.133587786259543L833.9692307692308,27.65267175572519L847,28.96946564885496L847,32.5L833.9692307692308,32.5L820.9384615384616,32.5L807.9076923076924,32.5L794.876923076923,32.5L781.8461538461539,32.5L768.8153846153847,32.5L755.7846153846154,32.5L742.7538461538461,32.5L729.723076923077,32.5L716.6923076923077,32.5L703.6615384615385,32.5L690.6307692307693,32.5L677.6,32.5L664.5692307692309,32.5L651.5384615384615,32.5L638.5076923076923,32.5L625.4769230769231,32.5L612.446153846154,32.5L599.4153846153846,32.5L586.3846153846154,32.5L573.3538461538462,32.5L560.323076923077,32.5L547.2923076923078,32.5L534.2615384615384,32.5L521.2307692307693,32.5L508.2000000000001,32.5L495.1692307692308,32.5L482.1384615384615,32.5L469.10769230769233,32.5L456.07692307692315,32.5L443.04615384615386,32.5L430.0153846153846,32.5L416.9846153846154,32.5L403.9538461538462,32.5L390.92307692307696,32.5L377.8923076923077,32.5L364.8615384615385,32.5L351.83076923076925,32.5L338.8,32.5L325.7692307692308,32.5L312.73846153846154,32.5L299.7076923076923,32.5L286.6769230769231,32.5L273.6461538461539,32.5L260.61538461538464,32.5L247.5846153846154,32.5L234.55384615384617,32.5L221.52307692307693,32.5L208.4923076923077,32.5L195.46153846153848,32.5L182.43076923076924,32.5L169.4,32.5L156.36923076923077,32.5L143.33846153846156,32.5L130.30769230769232,32.5L117.27692307692308,32.5L104.24615384615385,32.5L91.21538461538462,32.5L78.18461538461538,32.5L65.15384615384616,32.5L52.12307692307692,32.5L39.09230769230769,32.5L26.06153846153846,32.5L13.03076923076923,32.5L0,32.5Z" style="fill: #7AFEF7;"></path><text x="841" y="26.5" style="font-size: 16px; fill: #C0C0C0; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-family: Arial, Helvetica; text-anchor: end;">Artillery</text>
+							</g>
+							<g title="Engines" transform="translate(0,170)"><path class="area" d="M0,22.12482946793997L13.03076923076923,15.363233287858119L26.06153846153846,14.3656207366985L39.09230769230769,7.204979536152795L52.12307692307692,10.264324693042294L65.15384615384616,8.202592087312414L78.18461538461538,2.748976807639835L91.21538461538462,5.032401091405184L104.24615384615385,9.532742155525238L117.27692307692308,11.616643929058661L130.30769230769232,21.415416098226466L143.33846153846156,26.669508867667123L156.36923076923077,26.558663028649384L169.4,23.765347885402456L182.43076923076924,24.03137789904502L195.46153846153848,25.893587994542976L208.4923076923077,23.4549795361528L221.52307692307693,24.03137789904502L234.55384615384617,24.297407912687586L247.5846153846154,25.272851296043655L260.61538461538464,23.698840381991815L273.6461538461539,19.59754433833561L286.6769230769231,14.033083219645292L299.7076923076923,15.828785811732605L312.73846153846154,16.60470668485675L325.7692307692308,15.983969986357437L338.8,16.31650750341064L351.83076923076925,17.513642564802183L364.8615384615385,16.139154160982265L377.8923076923077,17.3806275579809L390.92307692307696,16.981582537517053L403.9538461538462,16.360845839017735L416.9846153846154,14.942019099590723L430.0153846153846,16.360845839017735L443.04615384615386,16.804229195088677L456.07692307692315,18.378240109140517L469.10769230769233,16.649045020463845L482.1384615384615,19.24283765347885L495.1692307692308,16.139154160982265L508.2000000000001,14.033083219645292L521.2307692307693,15.4962482946794L534.2615384615384,17.53581173260573L547.2923076923078,19.10982264665757L560.323076923077,18.156548431105048L573.3538461538462,18.910300136425647L586.3846153846154,18.245225102319235L599.4153846153846,17.114597544338338L612.446153846154,19.907912687585267L625.4769230769231,20.46214188267394L638.5076923076923,19.774897680763985L651.5384615384615,20.32912687585266L664.5692307692309,19.28717598908595L677.6,19.6418826739427L690.6307692307693,16.82639836289222L703.6615384615385,12.126534788540248L716.6923076923077,15.71793997271487L729.723076923077,18.06787175989086L742.7538461538461,15.651432469304229L755.7846153846154,11.993519781718966L768.8153846153847,11.949181446111869L781.8461538461539,7.958731241473398L794.876923076923,6.80593451568895L807.9076923076924,3.790927694406548L820.9384615384616,2.327762619372443L833.9692307692308,0L847,3.4362210095497936L847,32.5L833.9692307692308,32.5L820.9384615384616,32.5L807.9076923076924,32.5L794.876923076923,32.5L781.8461538461539,32.5L768.8153846153847,32.5L755.7846153846154,32.5L742.7538461538461,32.5L729.723076923077,32.5L716.6923076923077,32.5L703.6615384615385,32.5L690.6307692307693,32.5L677.6,32.5L664.5692307692309,32.5L651.5384615384615,32.5L638.5076923076923,32.5L625.4769230769231,32.5L612.446153846154,32.5L599.4153846153846,32.5L586.3846153846154,32.5L573.3538461538462,32.5L560.323076923077,32.5L547.2923076923078,32.5L534.2615384615384,32.5L521.2307692307693,32.5L508.2000000000001,32.5L495.1692307692308,32.5L482.1384615384615,32.5L469.10769230769233,32.5L456.07692307692315,32.5L443.04615384615386,32.5L430.0153846153846,32.5L416.9846153846154,32.5L403.9538461538462,32.5L390.92307692307696,32.5L377.8923076923077,32.5L364.8615384615385,32.5L351.83076923076925,32.5L338.8,32.5L325.7692307692308,32.5L312.73846153846154,32.5L299.7076923076923,32.5L286.6769230769231,32.5L273.6461538461539,32.5L260.61538461538464,32.5L247.5846153846154,32.5L234.55384615384617,32.5L221.52307692307693,32.5L208.4923076923077,32.5L195.46153846153848,32.5L182.43076923076924,32.5L169.4,32.5L156.36923076923077,32.5L143.33846153846156,32.5L130.30769230769232,32.5L117.27692307692308,32.5L104.24615384615385,32.5L91.21538461538462,32.5L78.18461538461538,32.5L65.15384615384616,32.5L52.12307692307692,32.5L39.09230769230769,32.5L26.06153846153846,32.5L13.03076923076923,32.5L0,32.5Z" style="fill: #7AFEF7;"></path><text x="841" y="26.5" style="font-size: 16px; fill: #C0C0C0; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-family: Arial, Helvetica; text-anchor: end;">Engines</text>
+							</g>
+							<g title="Missiles" transform="translate(0,212.5)"><path class="area" d="M0,32.5L13.03076923076923,32.5L26.06153846153846,32.5L39.09230769230769,32.5L52.12307692307692,32.5L65.15384615384616,32.12696335078534L78.18461538461538,32.140052356020945L91.21538461538462,32.11387434554974L104.24615384615385,27.62434554973822L117.27692307692308,25.37958115183246L130.30769230769232,27.68979057591623L143.33846153846156,25.50392670157068L156.36923076923077,25.804973821989527L169.4,24.103403141361255L182.43076923076924,22.041884816753928L195.46153846153848,22.225130890052355L208.4923076923077,22.44109947643979L221.52307692307693,23.36387434554974L234.55384615384617,18.867801047120416L247.5846153846154,18.90052356020942L260.61538461538464,23.409685863874344L273.6461538461539,22.637434554973822L286.6769230769231,18.27879581151832L299.7076923076923,15.431937172774866L312.73846153846154,14.587696335078533L325.7692307692308,13.069371727748692L338.8,12.729057591623036L351.83076923076925,10.589005235602091L364.8615384615385,7.480366492146597L377.8923076923077,10.883507853403142L390.92307692307696,7.146596858638745L403.9538461538462,4.096858638743456L416.9846153846154,2.4672774869109944L430.0153846153846,6.151832460732983L443.04615384615386,7.015706806282722L456.07692307692315,3.795811518324605L469.10769230769233,1.6426701570680606L482.1384615384615,0L495.1692307692308,0.7460732984293159L508.2000000000001,3.5078534031413575L521.2307692307693,6.407068062827225L534.2615384615384,7.388743455497384L547.2923076923078,17.676701570680628L560.323076923077,10.490837696335078L573.3538461538462,13.625654450261777L586.3846153846154,13.717277486910994L599.4153846153846,13.056282722513089L612.446153846154,13.907068062827225L625.4769230769231,6.976439790575913L638.5076923076923,12.617801047120416L651.5384615384615,15.517015706806284L664.5692307692309,18.83507853403141L677.6,16.06675392670157L690.6307692307693,18.854712041884817L703.6615384615385,16.465968586387433L716.6923076923077,15.386125654450261L729.723076923077,11.243455497382197L742.7538461538461,11.492146596858639L755.7846153846154,10.693717277486911L768.8153846153847,11.963350785340314L781.8461538461539,15.098167539267013L794.876923076923,11.937172774869108L807.9076923076924,8.86780104712042L820.9384615384616,4.450261780104711L833.9692307692308,10.660994764397905L847,11.45287958115183L847,32.5L833.9692307692308,32.5L820.9384615384616,32.5L807.9076923076924,32.5L794.876923076923,32.5L781.8461538461539,32.5L768.8153846153847,32.5L755.7846153846154,32.5L742.7538461538461,32.5L729.723076923077,32.5L716.6923076923077,32.5L703.6615384615385,32.5L690.6307692307693,32.5L677.6,32.5L664.5692307692309,32.5L651.5384615384615,32.5L638.5076923076923,32.5L625.4769230769231,32.5L612.446153846154,32.5L599.4153846153846,32.5L586.3846153846154,32.5L573.3538461538462,32.5L560.323076923077,32.5L547.2923076923078,32.5L534.2615384615384,32.5L521.2307692307693,32.5L508.2000000000001,32.5L495.1692307692308,32.5L482.1384615384615,32.5L469.10769230769233,32.5L456.07692307692315,32.5L443.04615384615386,32.5L430.0153846153846,32.5L416.9846153846154,32.5L403.9538461538462,32.5L390.92307692307696,32.5L377.8923076923077,32.5L364.8615384615385,32.5L351.83076923076925,32.5L338.8,32.5L325.7692307692308,32.5L312.73846153846154,32.5L299.7076923076923,32.5L286.6769230769231,32.5L273.6461538461539,32.5L260.61538461538464,32.5L247.5846153846154,32.5L234.55384615384617,32.5L221.52307692307693,32.5L208.4923076923077,32.5L195.46153846153848,32.5L182.43076923076924,32.5L169.4,32.5L156.36923076923077,32.5L143.33846153846156,32.5L130.30769230769232,32.5L117.27692307692308,32.5L104.24615384615385,32.5L91.21538461538462,32.5L78.18461538461538,32.5L65.15384615384616,32.5L52.12307692307692,32.5L39.09230769230769,32.5L26.06153846153846,32.5L13.03076923076923,32.5L0,32.5Z" style="fill: #7AFEF7;"></path><text x="841" y="26.5" style="font-size: 16px; fill: #C0C0C0; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-family: Arial, Helvetica; text-anchor: end;">Missiles</text>
+							</g>
+							<g title="Naval weapons" transform="translate(0,255)"><path class="area" d="M0,32.38636363636363L13.03076923076923,32.5L26.06153846153846,32.5L39.09230769230769,17.386363636363633L52.12307692307692,27.954545454545453L65.15384615384616,19.886363636363637L78.18461538461538,15.68181818181818L91.21538461538462,12.045454545454547L104.24615384615385,20.795454545454547L117.27692307692308,16.59090909090909L130.30769230769232,13.295454545454543L143.33846153846156,19.886363636363637L156.36923076923077,24.545454545454547L169.4,20.340909090909093L182.43076923076924,0L195.46153846153848,15.56818181818182L208.4923076923077,24.318181818181817L221.52307692307693,25.113636363636363L234.55384615384617,22.045454545454547L247.5846153846154,25L260.61538461538464,28.75L273.6461538461539,30L286.6769230769231,17.5L299.7076923076923,23.295454545454547L312.73846153846154,21.59090909090909L325.7692307692308,17.5L338.8,19.545454545454547L351.83076923076925,18.977272727272727L364.8615384615385,15.795454545454547L377.8923076923077,16.704545454545453L390.92307692307696,12.613636363636363L403.9538461538462,8.863636363636363L416.9846153846154,8.295454545454543L430.0153846153846,2.15909090909091L443.04615384615386,10.909090909090907L456.07692307692315,14.431818181818183L469.10769230769233,10.340909090909093L482.1384615384615,21.59090909090909L495.1692307692308,19.659090909090907L508.2000000000001,9.65909090909091L521.2307692307693,18.977272727272727L534.2615384615384,18.295454545454547L547.2923076923078,20.56818181818182L560.323076923077,21.81818181818182L573.3538461538462,26.81818181818182L586.3846153846154,26.136363636363637L599.4153846153846,22.045454545454547L612.446153846154,23.295454545454547L625.4769230769231,22.5L638.5076923076923,24.204545454545453L651.5384615384615,24.09090909090909L664.5692307692309,27.272727272727273L677.6,22.15909090909091L690.6307692307693,12.727272727272727L703.6615384615385,3.295454545454543L716.6923076923077,9.09090909090909L729.723076923077,11.022727272727273L742.7538461538461,16.59090909090909L755.7846153846154,13.40909090909091L768.8153846153847,24.204545454545453L781.8461538461539,20.68181818181818L794.876923076923,16.59090909090909L807.9076923076924,10.909090909090907L820.9384615384616,13.52272727272727L833.9692307692308,5.227272727272727L847,21.477272727272727L847,32.5L833.9692307692308,32.5L820.9384615384616,32.5L807.9076923076924,32.5L794.876923076923,32.5L781.8461538461539,32.5L768.8153846153847,32.5L755.7846153846154,32.5L742.7538461538461,32.5L729.723076923077,32.5L716.6923076923077,32.5L703.6615384615385,32.5L690.6307692307693,32.5L677.6,32.5L664.5692307692309,32.5L651.5384615384615,32.5L638.5076923076923,32.5L625.4769230769231,32.5L612.446153846154,32.5L599.4153846153846,32.5L586.3846153846154,32.5L573.3538461538462,32.5L560.323076923077,32.5L547.2923076923078,32.5L534.2615384615384,32.5L521.2307692307693,32.5L508.2000000000001,32.5L495.1692307692308,32.5L482.1384615384615,32.5L469.10769230769233,32.5L456.07692307692315,32.5L443.04615384615386,32.5L430.0153846153846,32.5L416.9846153846154,32.5L403.9538461538462,32.5L390.92307692307696,32.5L377.8923076923077,32.5L364.8615384615385,32.5L351.83076923076925,32.5L338.8,32.5L325.7692307692308,32.5L312.73846153846154,32.5L299.7076923076923,32.5L286.6769230769231,32.5L273.6461538461539,32.5L260.61538461538464,32.5L247.5846153846154,32.5L234.55384615384617,32.5L221.52307692307693,32.5L208.4923076923077,32.5L195.46153846153848,32.5L182.43076923076924,32.5L169.4,32.5L156.36923076923077,32.5L143.33846153846156,32.5L130.30769230769232,32.5L117.27692307692308,32.5L104.24615384615385,32.5L91.21538461538462,32.5L78.18461538461538,32.5L65.15384615384616,32.5L52.12307692307692,32.5L39.09230769230769,32.5L26.06153846153846,32.5L13.03076923076923,32.5L0,32.5Z" style="fill: #7AFEF7;"></path><text x="841" y="26.5" style="font-size: 16px; fill: #C0C0C0; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-family: Arial, Helvetica; text-anchor: end;">Naval weapons</text>
+							</g>
+						<!-- 	<g title="Other" transform="translate(0,297.5)"><path class="area" d="M0,32.5L13.03076923076923,32.5L26.06153846153846,32.5L39.09230769230769,32.5L52.12307692307692,32.5L65.15384615384616,32.5L78.18461538461538,32.5L91.21538461538462,32.5L104.24615384615385,32.5L117.27692307692308,32.5L130.30769230769232,32.5L143.33846153846156,32.5L156.36923076923077,32.40269461077844L169.4,32.40269461077844L182.43076923076924,32.40269461077844L195.46153846153848,32.40269461077844L208.4923076923077,32.40269461077844L221.52307692307693,32.40269461077844L234.55384615384617,32.40269461077844L247.5846153846154,32.40269461077844L260.61538461538464,32.5L273.6461538461539,32.5L286.6769230769231,30.55389221556886L299.7076923076923,31.91616766467066L312.73846153846154,31.91616766467066L325.7692307692308,31.91616766467066L338.8,32.5L351.83076923076925,32.5L364.8615384615385,30.164670658682635L377.8923076923077,21.893712574850298L390.92307692307696,23.83982035928144L403.9538461538462,27.050898203592816L416.9846153846154,30.067365269461078L430.0153846153846,25.785928143712574L443.04615384615386,24.034431137724553L456.07692307692315,28.802395209580837L469.10769230769233,26.953592814371255L482.1384615384615,30.35928143712575L495.1692307692308,30.35928143712575L508.2000000000001,27.82934131736527L521.2307692307693,26.758982035928142L534.2615384615384,17.41766467065868L547.2923076923078,18.293413173652695L560.323076923077,22.769461077844312L573.3538461538462,19.850299401197603L586.3846153846154,14.303892215568862L599.4153846153846,7.687125748502993L612.446153846154,9.146706586826348L625.4769230769231,16.25L638.5076923076923,0.5838323353293404L651.5384615384615,0L664.5692307692309,13.33083832335329L677.6,18.00149700598802L690.6307692307693,13.428143712574848L703.6615384615385,13.136227544910177L716.6923076923077,20.434131736526943L729.723076923077,17.612275449101794L742.7538461538461,12.552395209580837L755.7846153846154,10.800898203592816L768.8153846153847,10.217065868263472L781.8461538461539,0.5838323353293404L794.876923076923,7.297904191616766L807.9076923076924,3.600299401197603L820.9384615384616,9.535928143712574L833.9692307692308,16.736526946107784L847,15.179640718562876L847,32.5L833.9692307692308,32.5L820.9384615384616,32.5L807.9076923076924,32.5L794.876923076923,32.5L781.8461538461539,32.5L768.8153846153847,32.5L755.7846153846154,32.5L742.7538461538461,32.5L729.723076923077,32.5L716.6923076923077,32.5L703.6615384615385,32.5L690.6307692307693,32.5L677.6,32.5L664.5692307692309,32.5L651.5384615384615,32.5L638.5076923076923,32.5L625.4769230769231,32.5L612.446153846154,32.5L599.4153846153846,32.5L586.3846153846154,32.5L573.3538461538462,32.5L560.323076923077,32.5L547.2923076923078,32.5L534.2615384615384,32.5L521.2307692307693,32.5L508.2000000000001,32.5L495.1692307692308,32.5L482.1384615384615,32.5L469.10769230769233,32.5L456.07692307692315,32.5L443.04615384615386,32.5L430.0153846153846,32.5L416.9846153846154,32.5L403.9538461538462,32.5L390.92307692307696,32.5L377.8923076923077,32.5L364.8615384615385,32.5L351.83076923076925,32.5L338.8,32.5L325.7692307692308,32.5L312.73846153846154,32.5L299.7076923076923,32.5L286.6769230769231,32.5L273.6461538461539,32.5L260.61538461538464,32.5L247.5846153846154,32.5L234.55384615384617,32.5L221.52307692307693,32.5L208.4923076923077,32.5L195.46153846153848,32.5L182.43076923076924,32.5L169.4,32.5L156.36923076923077,32.5L143.33846153846156,32.5L130.30769230769232,32.5L117.27692307692308,32.5L104.24615384615385,32.5L91.21538461538462,32.5L78.18461538461538,32.5L65.15384615384616,32.5L52.12307692307692,32.5L39.09230769230769,32.5L26.06153846153846,32.5L13.03076923076923,32.5L0,32.5Z" style="fill: #7AFEF7;"></path><text x="841" y="26.5" style="font-size: 16px; fill: #C0C0C0; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-family: Arial, Helvetica; text-anchor: end;">Other</text>
+							</g>
+
+							<g title="Satellites" transform="translate(0,340)"><path class="area" d="M0,32.5L13.03076923076923,32.5L26.06153846153846,32.5L39.09230769230769,32.5L52.12307692307692,32.5L65.15384615384616,32.5L78.18461538461538,32.5L91.21538461538462,32.5L104.24615384615385,32.5L117.27692307692308,32.5L130.30769230769232,32.5L143.33846153846156,32.5L156.36923076923077,32.5L169.4,32.5L182.43076923076924,32.5L195.46153846153848,32.5L208.4923076923077,32.5L221.52307692307693,32.5L234.55384615384617,32.5L247.5846153846154,32.5L260.61538461538464,32.5L273.6461538461539,32.5L286.6769230769231,32.5L299.7076923076923,32.5L312.73846153846154,32.5L325.7692307692308,32.5L338.8,32.5L351.83076923076925,32.5L364.8615384615385,32.5L377.8923076923077,32.5L390.92307692307696,32.5L403.9538461538462,32.5L416.9846153846154,32.5L430.0153846153846,32.5L443.04615384615386,32.5L456.07692307692315,32.5L469.10769230769233,32.5L482.1384615384615,32.5L495.1692307692308,32.5L508.2000000000001,32.5L521.2307692307693,32.5L534.2615384615384,32.5L547.2923076923078,32.5L560.323076923077,32.5L573.3538461538462,32.5L586.3846153846154,32.5L599.4153846153846,32.5L612.446153846154,32.5L625.4769230769231,32.5L638.5076923076923,32.5L651.5384615384615,32.5L664.5692307692309,32.5L677.6,32.5L690.6307692307693,32.5L703.6615384615385,32.5L716.6923076923077,16.25L729.723076923077,32.5L742.7538461538461,32.5L755.7846153846154,32.5L768.8153846153847,32.5L781.8461538461539,32.5L794.876923076923,32.5L807.9076923076924,32.5L820.9384615384616,32.5L833.9692307692308,0L847,32.5L847,32.5L833.9692307692308,32.5L820.9384615384616,32.5L807.9076923076924,32.5L794.876923076923,32.5L781.8461538461539,32.5L768.8153846153847,32.5L755.7846153846154,32.5L742.7538461538461,32.5L729.723076923077,32.5L716.6923076923077,32.5L703.6615384615385,32.5L690.6307692307693,32.5L677.6,32.5L664.5692307692309,32.5L651.5384615384615,32.5L638.5076923076923,32.5L625.4769230769231,32.5L612.446153846154,32.5L599.4153846153846,32.5L586.3846153846154,32.5L573.3538461538462,32.5L560.323076923077,32.5L547.2923076923078,32.5L534.2615384615384,32.5L521.2307692307693,32.5L508.2000000000001,32.5L495.1692307692308,32.5L482.1384615384615,32.5L469.10769230769233,32.5L456.07692307692315,32.5L443.04615384615386,32.5L430.0153846153846,32.5L416.9846153846154,32.5L403.9538461538462,32.5L390.92307692307696,32.5L377.8923076923077,32.5L364.8615384615385,32.5L351.83076923076925,32.5L338.8,32.5L325.7692307692308,32.5L312.73846153846154,32.5L299.7076923076923,32.5L286.6769230769231,32.5L273.6461538461539,32.5L260.61538461538464,32.5L247.5846153846154,32.5L234.55384615384617,32.5L221.52307692307693,32.5L208.4923076923077,32.5L195.46153846153848,32.5L182.43076923076924,32.5L169.4,32.5L156.36923076923077,32.5L143.33846153846156,32.5L130.30769230769232,32.5L117.27692307692308,32.5L104.24615384615385,32.5L91.21538461538462,32.5L78.18461538461538,32.5L65.15384615384616,32.5L52.12307692307692,32.5L39.09230769230769,32.5L26.06153846153846,32.5L13.03076923076923,32.5L0,32.5Z" style="fill: #7AFEF7;"></path><text x="841" y="26.5" style="font-size: 16px; fill: #C0C0C0; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-family: Arial, Helvetica; text-anchor: end;">Satellites</text>
+							</g> -->
+
+							<g title="Sensors" transform="translate(0,297.5)"><path class="area" d="M0,32.086092715231786L13.03076923076923,32.43377483443709L26.06153846153846,31.274834437086092L39.09230769230769,28.49337748344371L52.12307692307692,26.274834437086092L65.15384615384616,26.20860927152318L78.18461538461538,27.102649006622517L91.21538461538462,26.986754966887418L104.24615384615385,26.473509933774835L117.27692307692308,28.112582781456954L130.30769230769232,25.629139072847682L143.33846153846156,23.82450331125828L156.36923076923077,20.894039735099337L169.4,19.6523178807947L182.43076923076924,16.225165562913908L195.46153846153848,16.705298013245034L208.4923076923077,14.751655629139073L221.52307692307693,15.513245033112582L234.55384615384617,20.2317880794702L247.5846153846154,18.642384105960264L260.61538461538464,22.91390728476821L273.6461538461539,23.874172185430464L286.6769230769231,22.58278145695364L299.7076923076923,26.556291390728475L312.73846153846154,26.63907284768212L325.7692307692308,20.596026490066226L338.8,16.705298013245034L351.83076923076925,20.430463576158942L364.8615384615385,19.15562913907285L377.8923076923077,15.64569536423841L390.92307692307696,9.55298013245033L403.9538461538462,5.033112582781456L416.9846153846154,5.745033112582782L430.0153846153846,0.08278145695364003L443.04615384615386,0L456.07692307692315,7.102649006622517L469.10769230769233,11.17549668874172L482.1384615384615,7.235099337748345L495.1692307692308,2.549668874172184L508.2000000000001,5.662251655629138L521.2307692307693,9.288079470198674L534.2615384615384,8.410596026490065L547.2923076923078,10.943708609271525L560.323076923077,12.3841059602649L573.3538461538462,10.596026490066226L586.3846153846154,10.331125827814567L599.4153846153846,11.688741721854303L612.446153846154,15.711920529801326L625.4769230769231,13.162251655629138L638.5076923076923,13.990066225165563L651.5384615384615,15.695364238410598L664.5692307692309,12.284768211920532L677.6,13.410596026490065L690.6307692307693,13.460264900662253L703.6615384615385,11.092715231788077L716.6923076923077,10.695364238410598L729.723076923077,8.460264900662253L742.7538461538461,8.509933774834437L755.7846153846154,9.735099337748345L768.8153846153847,14.503311258278146L781.8461538461539,10.89403973509934L794.876923076923,8.162251655629138L807.9076923076924,5.347682119205295L820.9384615384616,4.503311258278146L833.9692307692308,3.8410596026490076L847,6.374172185430464L847,32.5L833.9692307692308,32.5L820.9384615384616,32.5L807.9076923076924,32.5L794.876923076923,32.5L781.8461538461539,32.5L768.8153846153847,32.5L755.7846153846154,32.5L742.7538461538461,32.5L729.723076923077,32.5L716.6923076923077,32.5L703.6615384615385,32.5L690.6307692307693,32.5L677.6,32.5L664.5692307692309,32.5L651.5384615384615,32.5L638.5076923076923,32.5L625.4769230769231,32.5L612.446153846154,32.5L599.4153846153846,32.5L586.3846153846154,32.5L573.3538461538462,32.5L560.323076923077,32.5L547.2923076923078,32.5L534.2615384615384,32.5L521.2307692307693,32.5L508.2000000000001,32.5L495.1692307692308,32.5L482.1384615384615,32.5L469.10769230769233,32.5L456.07692307692315,32.5L443.04615384615386,32.5L430.0153846153846,32.5L416.9846153846154,32.5L403.9538461538462,32.5L390.92307692307696,32.5L377.8923076923077,32.5L364.8615384615385,32.5L351.83076923076925,32.5L338.8,32.5L325.7692307692308,32.5L312.73846153846154,32.5L299.7076923076923,32.5L286.6769230769231,32.5L273.6461538461539,32.5L260.61538461538464,32.5L247.5846153846154,32.5L234.55384615384617,32.5L221.52307692307693,32.5L208.4923076923077,32.5L195.46153846153848,32.5L182.43076923076924,32.5L169.4,32.5L156.36923076923077,32.5L143.33846153846156,32.5L130.30769230769232,32.5L117.27692307692308,32.5L104.24615384615385,32.5L91.21538461538462,32.5L78.18461538461538,32.5L65.15384615384616,32.5L52.12307692307692,32.5L39.09230769230769,32.5L26.06153846153846,32.5L13.03076923076923,32.5L0,32.5Z" style="fill: #7AFEF7;"></path><text x="841" y="26.5" style="font-size: 16px; fill: #C0C0C0; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-family: Arial, Helvetica; text-anchor: end;">Sensors</text>
+							</g>
+							<g title="Ships" transform="translate(0,340)"><path class="area" d="M0,27.753936400123493L13.03076923076923,21.507795615930842L26.06153846153846,27.48301945044767L39.09230769230769,23.399197283112073L52.12307692307692,22.325563445507875L65.15384615384616,19.41069774621797L78.18461538461538,16.59115467736956L91.21538461538462,16.796850879901207L104.24615384615385,18.65815066378512L117.27692307692308,15.116162395801172L130.30769230769232,17.057733868477925L143.33846153846156,22.200138931769064L156.36923076923077,21.512812596480394L169.4,25.345785736338375L182.43076923076924,19.94751466502007L195.46153846153848,20.945893794380982L208.4923076923077,15.537588761963569L221.52307692307693,12.241432540907685L234.55384615384617,15.467351034269836L247.5846153846154,16.66139240506329L260.61538461538464,18.201605433775857L273.6461538461539,16.72159617165792L286.6769230769231,15.813522692188947L299.7076923076923,11.995600493979623L312.73846153846154,14.905449212719976L325.7692307692308,14.022460635998762L338.8,13.992358752701449L351.83076923076925,12.497298548934857L364.8615384615385,12.396958937943811L377.8923076923077,13.365236184007408L390.92307692307696,2.8496449521457237L403.9538461538462,0L416.9846153846154,4.5202994751466505L430.0153846153846,5.72939178758876L443.04615384615386,4.881522074714418L456.07692307692315,15.683081197900588L469.10769230769233,8.659308428527325L482.1384615384615,11.127662858907069L495.1692307692308,9.838298857672122L508.2000000000001,15.803488731089843L521.2307692307693,18.005943192343317L534.2615384615384,16.606205619018215L547.2923076923078,17.208243284964496L560.323076923077,15.918879283729545L573.3538461538462,7.279638777400432L586.3846153846154,13.846866316764434L599.4153846153846,8.308119790058658L612.446153846154,7.0588916332201315L625.4769230769231,15.326875578882373L638.5076923076923,9.697823402284659L651.5384615384615,15.657996295152827L664.5692307692309,18.201605433775857L677.6,20.659925903056497L690.6307692307693,17.554414942883604L703.6615384615385,17.494211176288978L716.6923076923077,7.224451991355355L729.723076923077,7.239502933004015L742.7538461538461,12.477230626736645L755.7846153846154,16.3553565915406L768.8153846153847,13.836832355665326L781.8461538461539,19.435782648965727L794.876923076923,16.967428218585983L807.9076923076924,12.361840074096943L820.9384615384616,12.467196665637545L833.9692307692308,9.557347946897188L847,10.074096943501083L847,32.5L833.9692307692308,32.5L820.9384615384616,32.5L807.9076923076924,32.5L794.876923076923,32.5L781.8461538461539,32.5L768.8153846153847,32.5L755.7846153846154,32.5L742.7538461538461,32.5L729.723076923077,32.5L716.6923076923077,32.5L703.6615384615385,32.5L690.6307692307693,32.5L677.6,32.5L664.5692307692309,32.5L651.5384615384615,32.5L638.5076923076923,32.5L625.4769230769231,32.5L612.446153846154,32.5L599.4153846153846,32.5L586.3846153846154,32.5L573.3538461538462,32.5L560.323076923077,32.5L547.2923076923078,32.5L534.2615384615384,32.5L521.2307692307693,32.5L508.2000000000001,32.5L495.1692307692308,32.5L482.1384615384615,32.5L469.10769230769233,32.5L456.07692307692315,32.5L443.04615384615386,32.5L430.0153846153846,32.5L416.9846153846154,32.5L403.9538461538462,32.5L390.92307692307696,32.5L377.8923076923077,32.5L364.8615384615385,32.5L351.83076923076925,32.5L338.8,32.5L325.7692307692308,32.5L312.73846153846154,32.5L299.7076923076923,32.5L286.6769230769231,32.5L273.6461538461539,32.5L260.61538461538464,32.5L247.5846153846154,32.5L234.55384615384617,32.5L221.52307692307693,32.5L208.4923076923077,32.5L195.46153846153848,32.5L182.43076923076924,32.5L169.4,32.5L156.36923076923077,32.5L143.33846153846156,32.5L130.30769230769232,32.5L117.27692307692308,32.5L104.24615384615385,32.5L91.21538461538462,32.5L78.18461538461538,32.5L65.15384615384616,32.5L52.12307692307692,32.5L39.09230769230769,32.5L26.06153846153846,32.5L13.03076923076923,32.5L0,32.5Z" style="fill: #7AFEF7;"></path><text x="841" y="26.5" style="font-size: 16px; fill: #C0C0C0; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-family: Arial, Helvetica; text-anchor: end;">Ships</text>
+							</g>
+							<g title="Total" transform="translate(0,425)"><path class="area" d="M0,26.53448502941435L13.03076923076923,23.88060848186847L26.06153846153846,20.78013873035385L39.09230769230769,16.474010009658443L52.12307692307692,17.549115374484153L65.15384615384616,18.38451576082185L78.18461538461538,15.218412503292651L91.21538461538462,16.023849767319344L104.24615384615385,14.024168056897004L117.27692307692308,17.27588023531478L130.30769230769232,20.083852840460093L143.33846153846156,20.840778382649926L156.36923076923077,20.023213188164018L169.4,18.2882057248222L182.43076923076924,13.608251382913341L195.46153846153848,14.631991395205901L208.4923076923077,14.73828913864255L221.52307692307693,14.578485819650542L234.55384615384617,14.182544560540872L247.5846153846154,12.237795241022038L260.61538461538464,13.996345157608221L273.6461538461539,8.931150671700763L286.6769230769231,8.242712266221794L299.7076923076923,7.627041443498111L312.73846153846154,7.277471683203093L325.7692307692308,5.897027833874791L338.8,7.373781719202743L351.83076923076925,4.110655017999825L364.8615384615385,1.761403547282466L377.8923076923077,5.215723505136538L390.92307692307696,2.7052419000790238L403.9538461538462,0.39808148213187877L416.9846153846154,0L430.0153846153846,1.117196417595924L443.04615384615386,2.7958446746861014L456.07692307692315,5.0580604091667425L469.10769230769233,4.6507046272719315L482.1384615384615,4.302561682325052L495.1692307692308,6.20093950302924L508.2000000000001,7.058455527263149L521.2307692307693,11.087782070418825L534.2615384615384,12.357647730266045L547.2923076923078,15.309015277899729L560.323076923077,14.042003248748792L573.3538461538462,16.252853630696286L586.3846153846154,16.199348055140923L599.4153846153846,15.467391781543594L612.446153846154,11.882518219334447L625.4769230769231,12.662986214768637L638.5076923076923,14.492876898761963L651.5384615384615,18.66274475370972L664.5692307692309,18.978070945649314L677.6,19.811331108964794L690.6307692307693,18.782597242953727L703.6615384615385,17.148893669330057L716.6923076923077,17.07255904820441L729.723076923077,14.8845377118272L742.7538461538461,13.602544121520765L755.7846153846154,15.25122925629994L768.8153846153847,15.169187373781718L781.8461538461539,14.053417771533937L794.876923076923,10.927265343752744L807.9076923076924,12.044461761348671L820.9384615384616,13.036811835982085L833.9692307692308,12.474646588813766L847,12.07799192203003L847,32.5L833.9692307692308,32.5L820.9384615384616,32.5L807.9076923076924,32.5L794.876923076923,32.5L781.8461538461539,32.5L768.8153846153847,32.5L755.7846153846154,32.5L742.7538461538461,32.5L729.723076923077,32.5L716.6923076923077,32.5L703.6615384615385,32.5L690.6307692307693,32.5L677.6,32.5L664.5692307692309,32.5L651.5384615384615,32.5L638.5076923076923,32.5L625.4769230769231,32.5L612.446153846154,32.5L599.4153846153846,32.5L586.3846153846154,32.5L573.3538461538462,32.5L560.323076923077,32.5L547.2923076923078,32.5L534.2615384615384,32.5L521.2307692307693,32.5L508.2000000000001,32.5L495.1692307692308,32.5L482.1384615384615,32.5L469.10769230769233,32.5L456.07692307692315,32.5L443.04615384615386,32.5L430.0153846153846,32.5L416.9846153846154,32.5L403.9538461538462,32.5L390.92307692307696,32.5L377.8923076923077,32.5L364.8615384615385,32.5L351.83076923076925,32.5L338.8,32.5L325.7692307692308,32.5L312.73846153846154,32.5L299.7076923076923,32.5L286.6769230769231,32.5L273.6461538461539,32.5L260.61538461538464,32.5L247.5846153846154,32.5L234.55384615384617,32.5L221.52307692307693,32.5L208.4923076923077,32.5L195.46153846153848,32.5L182.43076923076924,32.5L169.4,32.5L156.36923076923077,32.5L143.33846153846156,32.5L130.30769230769232,32.5L117.27692307692308,32.5L104.24615384615385,32.5L91.21538461538462,32.5L78.18461538461538,32.5L65.15384615384616,32.5L52.12307692307692,32.5L39.09230769230769,32.5L26.06153846153846,32.5L13.03076923076923,32.5L0,32.5Z" style="fill: #177F79;"></path><text x="841" y="26.5" style="font-size: 20px; fill: #C0C0C0; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-family: Arial, Helvetica; text-anchor: end;">Total</text></g>
+						</svg>
+						<small style="text-align: right; font-size: 12px; color: #808080; text-anchor: end;">Source: SIPRI | Visualization: Travis Wethington</small>
+					</section>
 				</section>
 
-				<section>
+				<section id="credits"><!-- Credits -->
 					<h2>Credits</h2>
 					<ul>
 						<li>reveal.js</li>
-						<li>highcharts.js</li>
-						<li>Tableau Public</li>
-						<!-- <li>Adobe Illustrator</li> -->
 						<li>GitHub Pages</li>
+						<li>R: base, sqldf, leaflet, chorddiag</li>
+						<li>Adobe Illustrator</li>
+						<li>Tableau (Public for Hosting)</li>
+						<li>highcharts.js</li>
+						<li>D3.js</li>
+						<li>RAW</li>
+						<li>ezgif.com</li>
 					</ul>
 				</section>
-				<section>
-					<h2>Thank you!</h2>
 				</section>
-
 			</div>
 
 		</div>
@@ -304,232 +481,232 @@
 
 		</script>
 
-	<script type="text/javascript">
-	$(function () {
-	      $('#gtd-ts').highcharts({
-	          credits: {
-	              text: 'Sources: Global Terrorism Database (Data) , Highcharts (Javascript) | Travis Wethington',
-	              href: null
-	          },
-
-	          chart: {
-	              zoomType: 'x'
-	          },
-	          title: {
-	              text: 'Terrorism Events by Year, 1970-2014'
-	          },
-	          subtitle: {
-	              text: document.ontouchstart === undefined ?
-	                      'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
-	          },
-	          yAxis: {
-	              min: 0,
-	              title: {
-	                  text: 'Total Events'
-	              }
-	          },
-	          legend: {
-	              enabled: false
-	          },
-	          plotOptions: {
-	              area: {
-	                  fillColor: {
-	                      linearGradient: {
-	                          x1: 0,
-	                          y1: 0,
-	                          x2: 0,
-	                          y2: 1
-	                      },
-	                      stops: [
-	                          [0, Highcharts.getOptions().colors[0]],
-	                          [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
-	                      ]
-	                  },
-	                  marker: {
-	                      radius: 2
-	                  },
-	                  lineWidth: 1,
-	                  states: {
-	                      hover: {
-	                          lineWidth: 1
-	                      }
-	                  },
-	                  threshold: null
-	              }
-	          },
-	          series: [{
-	              type: 'area',
-	              name: 'Events',
-	              data: [
-						  [1971,470],
-						  [1972,494],
-						  [1973,473],
-						  [1974,580],
-						  [1975,741],
-						  [1976,923],
-						  [1977,1318],
-						  [1978,1526],
-						  [1979,2661],
-						  [1980,2663],
-						  [1981,2585],
-						  [1982,2546],
-						  [1983,2871],
-						  [1984,3494],
-						  [1985,2917],
-						  [1986,2861],
-						  [1987,3185],
-						  [1988,3721],
-						  [1989,4322],
-						  [1990,3887],
-						  [1991,4683],
-						  [1992,5077],
-						  [1993,4954],
-						  [1994,3459],
-						  [1995,3083],
-						  [1996,3058],
-						  [1997,3204],
-						  [1998,933],
-						  [1999,1396],
-						  [2000,1814],
-						  [2001,1907],
-						  [2002,1332],
-						  [2003,1262],
-						  [2004,1161],
-						  [2005,2014],
-						  [2006,2751],
-						  [2007,3241],
-						  [2008,4788],
-						  [2009,4722],
-						  [2010,4819],
-						  [2011,5065],
-						  [2012,8491],
-						  [2013,11999],
-						  [2014,16818]
-				]
-	          }]
-	      });
-	      // Make monochrome colors and set them as default for all funnels
-	      Highcharts.getOptions().plotOptions.funnel.colors = (function () {
-	        var colors = [],
-	            base = Highcharts.getOptions().colors[10],
-	            i;
-
-	        for (i = 0; i < 10; i += 1) {
-	            // Start out with a darkened base color (negative brighten), and end
-	            // up with a much brighter color
-	            colors.push(Highcharts.Color(base).brighten((i - 8) / 10).get());
-	        }
-	        return colors;
-	      }());
-		    $('#origins').highcharts({
-		        credits: {
-		              text: null,
+		<script type="text/javascript">
+		$(function () {
+		      $('#gtd-ts').highcharts({
+		          credits: {
+		              text: 'Sources: Global Terrorism Database (Data) , Highcharts (Javascript) | Travis Wethington',
 		              href: null
-		        },
-		        chart: {
-		            type: 'funnel',
-		            marginRight: 100,
-		            inverted: true
-		        },
-		        title: {
-		            text: 'Top 10 Refugee Origins, Overall 1951-2014',
-		            x: -50
-		        },
-		        subtitle: {
-		            text: 'Countries with Refugees Funneling Out (Millions)',
-		            x: -50
-		        },
-		        plotOptions: {
-		            series: {
-		                dataLabels: {
-		                    enabled: true,
-		                    format: '<b>{point.name}</b> ({point.y:,.1f})',
-		                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
-		                    softConnector: true
-		                },
-		                neckWidth: '35%',
-		                neckHeight: '20%'
+		          },
 
-		                //-- Other available options
-		                // height: pixels or percent
-		                // width: pixels or percent
-		            }
-		        },
-		        legend: {
-		            enabled: false
-		        },
-		        series: [{
-		            name: 'Refugees',
-		            data: [
-						['Afghanistan', 146.7],
-						//['Various/Unknown', 97.5],
-						['Iraq', 50],
-						['Colombia', 47.7],
-						['Dem. Rep. of the Congo', 33.7],
-						['Sudan', 33.6],
-						['Somalia', 29.3],
-						['Syria', 26.9],
-						['Ethiopia', 25.1],
-						['Angola', 20.1],
-						['Bosnia and Herzegovina', 19.8]
-		            ]
-		        }]
-		    });
+		          chart: {
+		              zoomType: 'x'
+		          },
+		          title: {
+		              text: 'Terrorism Events by Year, 1970-2014'
+		          },
+		          subtitle: {
+		              text: document.ontouchstart === undefined ?
+		                      'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
+		          },
+		          yAxis: {
+		              min: 0,
+		              title: {
+		                  text: 'Total Events'
+		              }
+		          },
+		          legend: {
+		              enabled: false
+		          },
+		          plotOptions: {
+		              area: {
+		                  fillColor: {
+		                      linearGradient: {
+		                          x1: 0,
+		                          y1: 0,
+		                          x2: 0,
+		                          y2: 1
+		                      },
+		                      stops: [
+		                          [0, Highcharts.getOptions().colors[0]],
+		                          [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+		                      ]
+		                  },
+		                  marker: {
+		                      radius: 2
+		                  },
+		                  lineWidth: 1,
+		                  states: {
+		                      hover: {
+		                          lineWidth: 1
+		                      }
+		                  },
+		                  threshold: null
+		              }
+		          },
+		          series: [{
+		              type: 'area',
+		              name: 'Events',
+		              data: [
+							  [1971,470],
+							  [1972,494],
+							  [1973,473],
+							  [1974,580],
+							  [1975,741],
+							  [1976,923],
+							  [1977,1318],
+							  [1978,1526],
+							  [1979,2661],
+							  [1980,2663],
+							  [1981,2585],
+							  [1982,2546],
+							  [1983,2871],
+							  [1984,3494],
+							  [1985,2917],
+							  [1986,2861],
+							  [1987,3185],
+							  [1988,3721],
+							  [1989,4322],
+							  [1990,3887],
+							  [1991,4683],
+							  [1992,5077],
+							  [1993,4954],
+							  [1994,3459],
+							  [1995,3083],
+							  [1996,3058],
+							  [1997,3204],
+							  [1998,933],
+							  [1999,1396],
+							  [2000,1814],
+							  [2001,1907],
+							  [2002,1332],
+							  [2003,1262],
+							  [2004,1161],
+							  [2005,2014],
+							  [2006,2751],
+							  [2007,3241],
+							  [2008,4788],
+							  [2009,4722],
+							  [2010,4819],
+							  [2011,5065],
+							  [2012,8491],
+							  [2013,11999],
+							  [2014,16818]
+					]
+		          }]
+		      });
+		      // Make monochrome colors and set them as default for all funnels
+		      Highcharts.getOptions().plotOptions.funnel.colors = (function () {
+		        var colors = [],
+		            base = Highcharts.getOptions().colors[10],
+		            i;
 
-		    $('#hosts').highcharts({
-		        credits: {
-		              text: 'Sources: UNHCR (Data) , Highcharts (Javascript) | Visualization: Travis Wethington',
-		              href: null
-		        },
-		        chart: {
-		            type: 'funnel',
-		            marginRight: 100
-		        },
-		        title: {
-		            text: 'Top 10 Asylum Hosts for Refugees, Overall 1951-2014',
-		            x: -50
-		        },
-		        subtitle: {
-		            text: 'Countries with Refugees Funneling In (Millions)',
-		            x: -50
-		        },
-		        plotOptions: {
-		            series: {
-		                dataLabels: {
-		                    enabled: true,
-		                    format: '<b>{point.name}</b> ({point.y:,.1f})',
-		                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
-		                    softConnector: true
-		                },
-		                neckWidth: '65%',
-		                neckHeight: '80%'
+		        for (i = 0; i < 10; i += 1) {
+		            // Start out with a darkened base color (negative brighten), and end
+		            // up with a much brighter color
+		            colors.push(Highcharts.Color(base).brighten((i - 8) / 10).get());
+		        }
+		        return colors;
+		      }());
+			    $('#origins').highcharts({
+			        credits: {
+			              text: null,
+			              href: null
+			        },
+			        chart: {
+			            type: 'funnel',
+			            marginRight: 100,
+			            inverted: true
+			        },
+			        title: {
+			            text: 'Top 10 Refugee Origins, Overall 1951-2014',
+			            x: -50
+			        },
+			        subtitle: {
+			            text: 'Countries with Refugees Funneling Out (Millions)',
+			            x: -50
+			        },
+			        plotOptions: {
+			            series: {
+			                dataLabels: {
+			                    enabled: true,
+			                    format: '<b>{point.name}</b> ({point.y:,.1f})',
+			                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+			                    softConnector: true
+			                },
+			                neckWidth: '35%',
+			                neckHeight: '20%'
 
-		                //-- Other available options
-		                // height: pixels or percent
-		                // width: pixels or percent
-		            }
-		        },
-		        legend: {
-		            enabled: false
-		        },
-		        series: [{
-		            name: 'Asylum Seekers',
-		            data: [
-						['Somalia', 23.3],
-						['Iraq', 23.7],
-						['Syria', 26.6],
-						['Germany', 31],
-						['United States', 34.1],
-						['Sudan', 37.1],
-						['Colombia', 42.7],
-						['Dem. Rep. of the Congo', 47.4],
-						['Iran', 69.7],
-						['Pakistan', 84]
-		            ]
-		        }]
-		    });
-	  });
-	</script>
+			                //-- Other available options
+			                // height: pixels or percent
+			                // width: pixels or percent
+			            }
+			        },
+			        legend: {
+			            enabled: false
+			        },
+			        series: [{
+			            name: 'Refugees',
+			            data: [
+							['Afghanistan', 146.7],
+							//['Various/Unknown', 97.5],
+							['Iraq', 50],
+							['Colombia', 47.7],
+							['Dem. Rep. of the Congo', 33.7],
+							['Sudan', 33.6],
+							['Somalia', 29.3],
+							['Syria', 26.9],
+							['Ethiopia', 25.1],
+							['Angola', 20.1],
+							['Bosnia and Herzegovina', 19.8]
+			            ]
+			        }]
+			    });
+
+			    $('#hosts').highcharts({
+			        credits: {
+			              text: 'Sources: UNHCR (Data) , Highcharts (Javascript) | Visualization: Travis Wethington',
+			              href: null
+			        },
+			        chart: {
+			            type: 'funnel',
+			            marginRight: 100
+			        },
+			        title: {
+			            text: 'Top 10 Asylum Hosts for Refugees, Overall 1951-2014',
+			            x: -50
+			        },
+			        subtitle: {
+			            text: 'Countries with Refugees Funneling In (Millions)',
+			            x: -50
+			        },
+			        plotOptions: {
+			            series: {
+			                dataLabels: {
+			                    enabled: true,
+			                    format: '<b>{point.name}</b> ({point.y:,.1f})',
+			                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+			                    softConnector: true
+			                },
+			                neckWidth: '65%',
+			                neckHeight: '80%'
+
+			                //-- Other available options
+			                // height: pixels or percent
+			                // width: pixels or percent
+			            }
+			        },
+			        legend: {
+			            enabled: false
+			        },
+			        series: [{
+			            name: 'Asylum Seekers',
+			            data: [
+							['Somalia', 23.3],
+							['Iraq', 23.7],
+							['Syria', 26.6],
+							['Germany', 31],
+							['United States', 34.1],
+							['Sudan', 37.1],
+							['Colombia', 42.7],
+							['Dem. Rep. of the Congo', 47.4],
+							['Iran', 69.7],
+							['Pakistan', 84]
+			            ]
+			        }]
+			    });
+		  });
+		</script>
 
 	</body>
 </html>
